@@ -1,2 +1,2 @@
 # Seguimiento-Egresados
-software para el seguimiento de egresados de la utp
+Diagrama entidad relacion para el modelo de datos
