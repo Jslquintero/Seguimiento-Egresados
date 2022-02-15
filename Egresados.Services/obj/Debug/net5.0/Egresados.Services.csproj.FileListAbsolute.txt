@@ -1,0 +1,12 @@
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.deps.json
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\bin\Debug\net5.0\ref\Egresados.Services.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.pdb
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.csproj.AssemblyReference.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.AssemblyInfoInputs.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.AssemblyInfo.cs
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.csproj.CoreCompileInputs.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\ref\Egresados.Services.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.pdb

@@ -1,0 +1,12 @@
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.deps.json
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\bin\Debug\net5.0\ref\Egresados.Model.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.pdb
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.csproj.AssemblyReference.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.AssemblyInfoInputs.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.AssemblyInfo.cs
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.csproj.CoreCompileInputs.cache
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\ref\Egresados.Model.dll
+C:\Users\Eliosth\source\repos\Egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.pdb

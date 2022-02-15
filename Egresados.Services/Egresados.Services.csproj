@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Egresados.Common\Egresados.Common.csproj" />
+    <ProjectReference Include="..\Egresados.Data\Egresados.Data.csproj" />
+    <ProjectReference Include="..\Egresados.Model\Egresados.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+</Project>

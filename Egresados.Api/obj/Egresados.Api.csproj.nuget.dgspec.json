@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj",
+        "projectName": "Egresados.Api",
+        "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj",
+        "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj"
+              },
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[13.15.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj",
+        "projectName": "Egresados.Common",
+        "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj",
+        "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj",
+        "projectName": "Egresados.Data",
+        "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj",
+        "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj"
+              },
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj",
+        "projectName": "Egresados.Model",
+        "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj",
+        "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj",
+        "projectName": "Egresados.Services",
+        "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj",
+        "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj"
+              },
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj"
+              },
+              "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
+                "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
