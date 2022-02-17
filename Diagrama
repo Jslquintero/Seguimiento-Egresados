@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-17T20:25:37.056Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="qDoT-AlJ_sFLuxghRfZa" version="16.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-17T20:26:36.007Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="s1BEK8GdRoteZD_NkTNy" version="16.5.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="8476" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="8820" dy="1338" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1929,7 +1929,7 @@
           <mxGeometry x="-5790" y="390" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-4" value="Coordinador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="-7010" y="1090" width="30" height="60" as="geometry" />
+          <mxGeometry x="-6790" y="1260" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-5" target="9v5aNnrhVruOQ8EW-JOW-18">
           <mxGeometry relative="1" as="geometry" />
@@ -1963,18 +1963,6 @@
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-11" value="Registra puesto trabajo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-5835" y="520" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-13" target="9v5aNnrhVruOQ8EW-JOW-44">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-13" target="9v5aNnrhVruOQ8EW-JOW-39">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-13" target="9v5aNnrhVruOQ8EW-JOW-34">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-13" value="Sys Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="-7010" y="1280" width="30" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-15" value="Postea trabajos" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-5945" y="900" width="120" height="60" as="geometry" />
         </mxCell>
@@ -1995,33 +1983,6 @@
         </mxCell>
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-27" value="Postular trabajo" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-6780" y="1120" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-34" target="9v5aNnrhVruOQ8EW-JOW-35">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-34" target="9v5aNnrhVruOQ8EW-JOW-38">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-34" value="Consultar lista de egresados&amp;nbsp;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6940" y="1380" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-35" value="Eliminar egresados" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6760" y="1390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-38" value="Editar egresados" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6760" y="1310" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-39" value="Crear Perfil" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6940" y="1280" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-44" target="9v5aNnrhVruOQ8EW-JOW-45">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-44" value="Registra puesto trabajo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6920" y="1510" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9v5aNnrhVruOQ8EW-JOW-45" value="Postea trabajos" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-6760" y="1510" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9v5aNnrhVruOQ8EW-JOW-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9v5aNnrhVruOQ8EW-JOW-59" target="9v5aNnrhVruOQ8EW-JOW-60">
           <mxGeometry relative="1" as="geometry" />
