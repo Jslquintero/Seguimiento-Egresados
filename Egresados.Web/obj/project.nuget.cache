@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JAow6Kd/34dDEoGmlBVQhDu07BHf4lhLYgcOFzXdmHf9wjuirbDhHS/9smK2e+P6LhZrvaSXB3sYVEqqvW7K/g==",
+  "dgSpecHash": "Fl0rrFEqih84yVqsL3TVntl42Cxekhq2oDeO39LB8bRfjk9vPZitBkLMw4UI0nmHCQtNe602D77e+dU/+k0Zyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Web\\Egresados.Web.csproj",
+  "projectFilePath": "D:\\Repositorios SSD\\egresados\\Egresados.Web\\Egresados.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eliosth\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.0.0\\microsoft.aspnetcore.nodeservices.3.0.0.nupkg.sha512",
     "C:\\Users\\Eliosth\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.0.0\\microsoft.aspnetcore.spaservices.3.0.0.nupkg.sha512",

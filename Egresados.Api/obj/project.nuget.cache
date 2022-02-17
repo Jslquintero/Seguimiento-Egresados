@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XLCKXqtrT0AiY/lakioiWcMW8MAecwwdCo5pM8+gOzqui8NP4/YNE+W6+mzxihfglSjuvBpo+8LBjb+4I6NxlA==",
+  "dgSpecHash": "HiHy6dfEVEmv92ST94ozTbc7b9qvZDo7aXyerohq4/iyoA5v6hlokemYMiskv5qNIKODW3lZgSoVsW+lQ4O+PQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj",
+  "projectFilePath": "D:\\Repositorios SSD\\egresados\\Egresados.Api\\Egresados.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eliosth\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Eliosth\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

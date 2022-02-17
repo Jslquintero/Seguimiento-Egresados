@@ -568,11 +568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Web\\Egresados.Web.csproj",
+      "projectUniqueName": "D:\\Repositorios SSD\\egresados\\Egresados.Web\\Egresados.Web.csproj",
       "projectName": "Egresados.Web",
-      "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Web\\Egresados.Web.csproj",
+      "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Web\\Egresados.Web.csproj",
       "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Web\\obj\\",
+      "outputPath": "D:\\Repositorios SSD\\egresados\\Egresados.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",

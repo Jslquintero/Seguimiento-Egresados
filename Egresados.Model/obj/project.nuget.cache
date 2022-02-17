@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g2Aby3uue+LpJNtJoYwtC9lMQguHzF0OdGRWHciJ811p9sE7zOHIaoy3V5uW+NPojJXeXx5eblAtjD6oC9bt9g==",
+  "dgSpecHash": "RhrGCUqmsdSSu3NBKXk6ZOhHBCMkEOXl7j9GI7vpLf13PX9K+uFdYLP9m68Dh24iuvYwFEN5GbKRjVUHmnzkLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj",
+  "projectFilePath": "D:\\Repositorios SSD\\egresados\\Egresados.Model\\Egresados.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eliosth\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.10\\microsoft.aspnetcore.cryptography.internal.5.0.10.nupkg.sha512",
     "C:\\Users\\Eliosth\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.10\\microsoft.aspnetcore.cryptography.keyderivation.5.0.10.nupkg.sha512",

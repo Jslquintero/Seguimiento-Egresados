@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj",
+      "projectUniqueName": "D:\\Repositorios SSD\\egresados\\Egresados.Common\\Egresados.Common.csproj",
       "projectName": "Egresados.Common",
-      "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj",
+      "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Common\\Egresados.Common.csproj",
       "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\obj\\",
+      "outputPath": "D:\\Repositorios SSD\\egresados\\Egresados.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",

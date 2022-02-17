@@ -6477,11 +6477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj",
+      "projectUniqueName": "D:\\Repositorios SSD\\egresados\\Egresados.Api\\Egresados.Api.csproj",
       "projectName": "Egresados.Api",
-      "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\Egresados.Api.csproj",
+      "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Api\\Egresados.Api.csproj",
       "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Api\\obj\\",
+      "outputPath": "D:\\Repositorios SSD\\egresados\\Egresados.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6499,11 +6499,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
-              "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj"
+            "D:\\Repositorios SSD\\egresados\\Egresados.Model\\Egresados.Model.csproj": {
+              "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Model\\Egresados.Model.csproj"
             },
-            "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj": {
-              "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj"
+            "D:\\Repositorios SSD\\egresados\\Egresados.Services\\Egresados.Services.csproj": {
+              "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Services\\Egresados.Services.csproj"
             }
           }
         }

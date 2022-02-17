@@ -10,3 +10,22 @@ C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egre
 C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.dll
 C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\ref\Egresados.Services.dll
 C:\Users\Eliosth\source\repos\Egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.csproj.AssemblyReference.cache
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.AssemblyInfoInputs.cache
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.AssemblyInfo.cs
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.csproj.CoreCompileInputs.cache
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.dll
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\ref\Egresados.Services.dll
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.deps.json
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.dll
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\ref\Egresados.Services.dll
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Services.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Common.dll
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Data.dll
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Model.dll
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Common.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Data.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\bin\Debug\net5.0\Egresados.Model.pdb
+D:\Repositorios SSD\egresados\Egresados.Services\obj\Debug\net5.0\Egresados.Services.csproj.CopyComplete

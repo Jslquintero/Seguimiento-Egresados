@@ -1,0 +1,12 @@
+D:\Repositorios SSD\egresados\Egresados.Common\bin\Debug\net5.0\Egresados.Common.deps.json
+D:\Repositorios SSD\egresados\Egresados.Common\bin\Debug\net5.0\Egresados.Common.dll
+D:\Repositorios SSD\egresados\Egresados.Common\bin\Debug\net5.0\ref\Egresados.Common.dll
+D:\Repositorios SSD\egresados\Egresados.Common\bin\Debug\net5.0\Egresados.Common.pdb
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.csproj.AssemblyReference.cache
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.AssemblyInfoInputs.cache
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.AssemblyInfo.cs
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.csproj.CoreCompileInputs.cache
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.dll
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\ref\Egresados.Common.dll
+D:\Repositorios SSD\egresados\Egresados.Common\obj\Debug\net5.0\Egresados.Common.pdb

@@ -5917,11 +5917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj",
+      "projectUniqueName": "D:\\Repositorios SSD\\egresados\\Egresados.Services\\Egresados.Services.csproj",
       "projectName": "Egresados.Services",
-      "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\Egresados.Services.csproj",
+      "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Services\\Egresados.Services.csproj",
       "packagesPath": "C:\\Users\\Eliosth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Services\\obj\\",
+      "outputPath": "D:\\Repositorios SSD\\egresados\\Egresados.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eliosth\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5939,14 +5939,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj": {
-              "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Common\\Egresados.Common.csproj"
+            "D:\\Repositorios SSD\\egresados\\Egresados.Common\\Egresados.Common.csproj": {
+              "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Common\\Egresados.Common.csproj"
             },
-            "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj": {
-              "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Data\\Egresados.Data.csproj"
+            "D:\\Repositorios SSD\\egresados\\Egresados.Data\\Egresados.Data.csproj": {
+              "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Data\\Egresados.Data.csproj"
             },
-            "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj": {
-              "projectPath": "C:\\Users\\Eliosth\\source\\repos\\Egresados\\Egresados.Model\\Egresados.Model.csproj"
+            "D:\\Repositorios SSD\\egresados\\Egresados.Model\\Egresados.Model.csproj": {
+              "projectPath": "D:\\Repositorios SSD\\egresados\\Egresados.Model\\Egresados.Model.csproj"
             }
           }
         }
