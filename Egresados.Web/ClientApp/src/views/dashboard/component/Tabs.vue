@@ -265,7 +265,7 @@
         cols="12"
         md="8"
       >
-        <div class="text-center headline font-weight-light mb-12 pl-0">
+        <div class="text-center text-h5 font-weight-light mb-12 pl-0">
           Page Subcategories
         </div>
 
@@ -292,7 +292,7 @@
               <v-card class="mt-0 px-5">
                 <v-card-text>
                   <base-subheading subheading="Description about product">
-                    <p class="grey--text body-2 font-weight-light">
+                    <p class="grey--text text-body-2 font-weight-light">
                       More Information here
                     </p>
                   </base-subheading>
@@ -312,7 +312,7 @@
               <v-card class="mt-0 px-5">
                 <v-card-text>
                   <base-subheading subheading="Location of the product product">
-                    <p class="grey--text body-2 font-weight-light">
+                    <p class="grey--text text-body-2 font-weight-light">
                       More Information here
                     </p>
                   </base-subheading>
@@ -332,7 +332,7 @@
               <v-card class="mt-0 px-5">
                 <v-card-text>
                   <base-subheading subheading="Legal info of the product product">
-                    <p class="grey--text body-2 font-weight-light">
+                    <p class="grey--text text-body-2 font-weight-light">
                       More Information here
                     </p>
                   </base-subheading>
@@ -352,7 +352,7 @@
               <v-card class="mt-0 px-5">
                 <v-card-text>
                   <base-subheading heading="Help center">
-                    <p class="grey--text body-2 font-weight-light">
+                    <p class="grey--text text-body-2 font-weight-light">
                       More Information here
                     </p>
                   </base-subheading>

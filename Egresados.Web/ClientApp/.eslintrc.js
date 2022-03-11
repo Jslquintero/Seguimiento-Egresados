@@ -1,4 +1,8 @@
+/* eslint-disable no-dupe-keys */
 module.exports = {
+  rules: {
+    'allowIndentationTabs ': 1, // disable rule
+  },
   root: true,
   env: {
     node: true,
@@ -7,8 +11,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
   },
 }

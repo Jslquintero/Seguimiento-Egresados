@@ -23,19 +23,19 @@
             <v-card class="pa-6">
               <v-chip
                 :color="timeline.color"
-                class="overline mb-3"
+                class="text-overline mb-3"
                 small
               >
                 {{ timeline.chip }}
               </v-chip>
 
               <p
-                class="subtitle-1 font-weight-light"
+                class="text-subtitle-1 font-weight-light"
                 v-text="timeline.text"
               />
 
               <div
-                class="text-uppercase body-2"
+                class="text-uppercase text-body-2"
                 v-text="timeline.subtext"
               />
 

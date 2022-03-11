@@ -28,25 +28,19 @@ namespace Egresados.Api.Controllers
         private readonly IConfiguration _configuration;
         private readonly SignInManager<Usuario> _signInManager;
         private readonly UserManager<Usuario> _userManager;
-        //private readonly IEmailServices _emailServices;
         private readonly RoleManager<Rol> _rolManager;
-        //private readonly IProveedorServices _proveedorServices;
 
         public UsuariosController(ILogger<UsuariosController> logger,
                                  IConfiguration configuration,
                                  SignInManager<Usuario> signInManager,
                                  UserManager<Usuario> userManager,
                                  RoleManager<Rol> rolManager)
-                                // IEmailServices emailServices,
-                                // IProveedorServices proveedorServices)
         {
             _logger = logger;
             _configuration = configuration;
             _signInManager = signInManager;
             _userManager = userManager;
-           // _emailServices = emailServices;
             _rolManager = rolManager;
-            //_proveedorServices = proveedorServices;
         }
 
 
@@ -61,12 +55,12 @@ namespace Egresados.Api.Controllers
             try
             {
                 // Tu código para validar que el usuario ingresado es válido
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.Cedula, model.Password, false, lockoutOnFailure: false);
 
                 if (!result.Succeeded)
                     return Unauthorized();
 
-                var user = await _userManager.FindByEmailAsync(model.Email);
+                var user = await _userManager.FindByNameAsync(model.Cedula);
                 var roles = await _userManager.GetRolesAsync(user);
                 user.Roles = roles;
 
@@ -116,8 +110,7 @@ namespace Egresados.Api.Controllers
                     {
                         Name = model.Name,
                         LastName= model.LastName,
-                        UserName = model.Email,
-                        Email = model.Email,
+                        UserName = model.Cedula, //UserName es el campo que almacena la cedula
                         Roles = model.Roles
                     
                     };
@@ -130,19 +123,7 @@ namespace Egresados.Api.Controllers
                         }
 
                         await _userManager.SetLockoutEnabledAsync(user, false);
-                  
-
-                        //var uri = new Uri(model.ClienteURI);
-
-                        //await _emailServices.SendEmailAsync(
-                        //    model.Email,
-                        //    "Registro de Usuario",
-                        //    $"Se acaba de registar a farmacias San Nicolas \n" +
-                        //    $"Usuario: " + model.Email + "\n" +
-                        //    $"Password: " + model.Password + "\n" +
-                        //    $"<a href='{HtmlEncoder.Default.Encode(uri.AbsoluteUri)}'>click aqui</a>.");
-
-
+  
                         return Ok();
                     }
                     var errorString = "";
@@ -222,7 +203,7 @@ namespace Egresados.Api.Controllers
             var claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id),
-                new Claim(ClaimTypes.Email, usuario.Email)
+                new Claim(ClaimTypes.Name, usuario.UserName)
             };
 
             foreach (var item in usuario.Roles)
@@ -254,7 +235,7 @@ namespace Egresados.Api.Controllers
                 UserName = usuario.UserName,
                 Name = usuario.Name,
                 LastName = usuario.LastName,
-                Email = usuario.Email,
+                Cedula = usuario.UserName,
                 Roles = usuario.Roles,
                 ProveedorId = usuario.ProveedorId       
                 
@@ -262,94 +243,10 @@ namespace Egresados.Api.Controllers
             return token;
         }
 
-
-        ///// <summary>
-        ///// Recuperar Password.
-        ///// </summary>  
-        //[HttpPost("recuperarPassword")]
-        //public async Task<IActionResult> RecuperarPassword(RecuperarPasswordViewModel model)
-        //{
-        //    try
-        //    {
-        //        if (ModelState.IsValid)
-        //        {
-        //            var user = await _userManager.FindByEmailAsync(model.Email);
-        //            if (user == null)
-        //            {
-        //                return Unauthorized();
-        //            }
-
-        //            // For more information on how to enable account confirmation and password reset please 
-        //            // visit https://go.microsoft.com/fwlink/?LinkID=532713
-        //            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
-
-        //            var email = user.Email;
-
-        //            var uri = new Uri(model.ClienteURI + "?code=" + code + "&email=" + email);
-
-        //            await _emailServices.SendEmailAsync(
-        //                model.Email,
-        //                "Resetear Password",
-        //                $"Por favor ingrese al siguiente link para resetear el password <a href='{HtmlEncoder.Default.Encode(uri.AbsoluteUri)}'>click aqui</a>.");
-
-        //            return Ok();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-
-        //    return BadRequest();
-        //}
-
-        ///// <summary>
-        ///// Recuperar Password pantalla de confirmacion.
-        ///// </summary>  
-        //[HttpPost("recuperarPasswordConfirmar")]
-        //public async Task<IActionResult> ResetearPassword(RecuperarPasswordConfirmarViewModel model)
-        //{
-        //    try
-        //    {
-        //        if (!ModelState.IsValid)
-        //        {
-        //            return BadRequest();
-        //        }
-
-        //        var user = await _userManager.FindByEmailAsync(model.Email);
-        //        if (user == null)
-        //        {
-        //            return Unauthorized();
-        //        }
-
-        //        model.Code = model.Code.Replace("%20", "+");
-
-        //        var result = await _userManager.ResetPasswordAsync(user, model.Code, model.Password);
-        //        if (result.Succeeded)
-        //        {
-        //            await _signInManager.SignInAsync(user, isPersistent: false);
-        //            return Ok();
-        //        }
-        //        var smgError = "";
-        //        foreach (var error in result.Errors)
-        //        {
-        //            smgError += error.Description + ". \n";
-        //        }
-        //        BadRequest(smgError);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        BadRequest(ex.Message);
-        //    }
-
-        //    return BadRequest();
-        //}
-
-
         /// <summary>
         /// Listado de usuarios
         /// </summary>  
-        [Authorize(Roles = "Administrador,Compras")]
+        [Authorize(Roles = "Administrador,Administrativo")]
         [HttpGet("getList")]
         public async Task<List<Usuario>> GetList()
         {
@@ -366,7 +263,7 @@ namespace Egresados.Api.Controllers
         /// <summary>
         /// Listado de roles
         /// </summary>  
-        [Authorize(Roles = "Administrador,Compras")]
+        [Authorize(Roles = "Administrador,Administrativo")]
         [HttpGet("getListRoles")]
         public async Task<List<Rol>> GetListRoles()
         {
@@ -380,7 +277,7 @@ namespace Egresados.Api.Controllers
         /// <summary>
         /// Listado de roles
         /// </summary>  
-        [Authorize(Roles = "Administrador,Compras")]
+        [Authorize(Roles = "Administrador,Administrativo")]
         [HttpGet("getOne/{id}")]
         public async Task<Usuario> GetOne(string id)
         {

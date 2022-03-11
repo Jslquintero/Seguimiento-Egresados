@@ -9,8 +9,8 @@ namespace Egresados.Api.Models
     public class LoginViewModel
     {
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
+        [Display(Name = "Cedula")]
+        public string Cedula { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [Display(Name = "Password")]

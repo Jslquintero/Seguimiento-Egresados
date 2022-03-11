@@ -162,6 +162,7 @@ namespace Egresados.Api
             SeedRoles(userManager, roleManager);
             SeedUserAdmin(userManager, roleManager);
             SeedUserEgresado(userManager, roleManager);
+            SeedUserPersonalAdministrativo(userManager, roleManager);
         }
 
         private async void SeedRoles(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
@@ -173,16 +174,16 @@ namespace Egresados.Api
                 role.Name = "Administrador";
                 IdentityResult roleResult = roleManager.CreateAsync(role).Result;
             }
-            if (!roleManager.RoleExistsAsync("Compras").Result)
+            if (!roleManager.RoleExistsAsync("Egresado").Result)
             {
                 Rol role = new Rol();
-                role.Name = "Compras";
+                role.Name = "Egresado";
                 IdentityResult roleResult = roleManager.CreateAsync(role).Result;
             }
-            if (!roleManager.RoleExistsAsync("Proveedor").Result)
+            if (!roleManager.RoleExistsAsync("Administrativo").Result)
             {
                 Rol role = new Rol();
-                role.Name = "Proveedor";
+                role.Name = "Administrativo";
                 IdentityResult roleResult = roleManager.CreateAsync(role).Result;
             }
 
@@ -200,7 +201,7 @@ namespace Egresados.Api
             if (userManager.FindByNameAsync(email).Result == null)
             {
                 Usuario user = new Usuario();
-                user.UserName = email;
+                user.UserName = "6-719-1951";
                 user.Email = email;
                 user.Name = "Administrador";
                 user.LastName = "del Sistema";
@@ -214,26 +215,52 @@ namespace Egresados.Api
             #endregion
         }
 
+      
         private async void SeedUserEgresado(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
         {
             #region Usuario
 
-            string email = "compras@compras.com";
+            string email = "egresado@egresado.com";
 
             string contrasena = "Admin1234";
 
             if (userManager.FindByNameAsync(email).Result == null)
             {
                 Usuario user = new Usuario();
-                user.UserName = email;
+                user.UserName = "6-719-1952";
                 user.Email = email;
-                user.Name = "Sector";
-                user.LastName = "Compras";
+                user.Name = "Egresado";
+                user.LastName = "Sistema";
 
                 IdentityResult userResult = userManager.CreateAsync(user, contrasena).Result;
                 if (userResult.Succeeded)
                 {
-                    userManager.AddToRoleAsync(user, "Compras").Wait();
+                    userManager.AddToRoleAsync(user, "Egresado").Wait();
+                }
+            }
+            #endregion
+        }
+
+        private async void SeedUserPersonalAdministrativo(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
+        {
+            #region Usuario
+
+            string email = "departamento@departamento.com";
+
+            string contrasena = "Admin1234";
+
+            if (userManager.FindByNameAsync(email).Result == null)
+            {
+                Usuario user = new Usuario();
+                user.UserName = "6-719-1953";
+                user.Email = email;
+                user.Name = "Personal";
+                user.LastName = "Administrativo";
+
+                IdentityResult userResult = userManager.CreateAsync(user, contrasena).Result;
+                if (userResult.Succeeded)
+                {
+                    userManager.AddToRoleAsync(user, "Administrativo").Wait();
                 }
             }
             #endregion
