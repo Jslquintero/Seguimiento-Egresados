@@ -52,7 +52,7 @@ namespace Egresados.Api
                 config.PostProcess = document =>
                 {
                     document.Info.Version = "v1";
-                    document.Info.Title = "Fasani API";
+                    document.Info.Title = "Egresado API";
                 };
             });
 
@@ -162,8 +162,6 @@ namespace Egresados.Api
             SeedRoles(userManager, roleManager);
             SeedUserAdmin(userManager, roleManager);
             SeedUserEgresado(userManager, roleManager);
-            SeedUserSecretariaAcademica(userManager, roleManager);
-            SeedUserCoordinador(userManager, roleManager);
         }
 
         private async void SeedRoles(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
@@ -241,56 +239,5 @@ namespace Egresados.Api
             #endregion
         }
 
-
-        private async void SeedUserSecretariaAcademica(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
-        {
-            #region Usuario
-
-            string email = "compras@compras.com";
-
-            string contrasena = "Admin1234";
-
-            if (userManager.FindByNameAsync(email).Result == null)
-            {
-                Usuario user = new Usuario();
-                user.UserName = email;
-                user.Email = email;
-                user.Name = "Sector";
-                user.LastName = "Compras";
-
-                IdentityResult userResult = userManager.CreateAsync(user, contrasena).Result;
-                if (userResult.Succeeded)
-                {
-                    userManager.AddToRoleAsync(user, "Compras").Wait();
-                }
-            }
-            #endregion
-        }
-
-        private async void SeedUserCoordinador(UserManager<Usuario> userManager, RoleManager<Rol> roleManager)
-        {
-            #region Usuario
-
-            string email = "proveedor@admin.com";
-
-            string contrasena = "Admin1234";
-
-            if (userManager.FindByNameAsync(email).Result == null)
-            {
-                Usuario user = new Usuario();
-                user.UserName = email;
-                user.Email = email;
-                user.Name = "Usuario";
-                user.LastName = "Proveedor 1";
-                user.ProveedorId = 1;
-
-                IdentityResult userResult = userManager.CreateAsync(user, contrasena).Result;
-                if (userResult.Succeeded)
-                {
-                    userManager.AddToRoleAsync(user, "Proveedor").Wait();
-                }
-            }
-            #endregion
-        }
     }
 }
