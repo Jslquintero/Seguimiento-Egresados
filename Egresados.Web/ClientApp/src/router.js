@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       redirect: 'usuarios/Login',
-      component: () => import('@/views/dashboard/Index'),
+      component: () => import('@/views/dashboard/Dashboard'),
     },
     {
       path: '/usuarios',
@@ -33,50 +33,62 @@ export default new Router({
         },
       ],
     },
-    // Dashboard
     {
-      name: 'Dashboard',
-      path: '',
-      component: () => import('@/views/dashboard/Dashboard'),
+      path: '/usuarios',
+      component: () => import('@/views/dashboard/Index'),
+      children: [
+        {
+          name: 'Listar',
+          path: 'Listar',
+          component: () => import('@/views/usuarios/Listar'),
+        },
+      ],
     },
-    // Pages
+    //  dashboard routes start
     {
-      name: 'User Profile',
-      path: 'pages/user',
-      component: () => import('@/views/dashboard/pages/UserProfile'),
-    },
-    {
-      name: 'Notifications',
-      path: 'components/notifications',
-      component: () => import('@/views/dashboard/component/Notifications'),
-    },
-    {
-      name: 'Icons',
-      path: 'components/icons',
-      component: () => import('@/views/dashboard/component/Icons'),
-    },
-    {
-      name: 'Typography',
-      path: 'components/typography',
-      component: () => import('@/views/dashboard/component/Typography'),
-    },
-    // Tables
-    {
-      name: 'Regular Tables',
-      path: 'tables/regular-tables',
-      component: () => import('@/views/dashboard/tables/RegularTables'),
-    },
-    // Maps
-    {
-      name: 'Google Maps',
-      path: 'maps/google-maps',
-      component: () => import('@/views/dashboard/maps/GoogleMaps'),
-    },
-    // Upgrade
-    {
-      name: 'Upgrade',
-      path: 'upgrade',
-      component: () => import('@/views/dashboard/Upgrade'),
+      path: '/dashboard',
+      component: () => import('@/views/dashboard/Index'),
+      children: [
+        // Dashboard
+        {
+          name: 'Dashboard',
+          path: '',
+          component: () => import('@/views/dashboard/Dashboard'),
+        },
+        // Pages
+        {
+          name: 'Usuarios',
+          path: '/pages/user',
+          component: () => import('@/views/dashboard/pages/UserProfile'),
+        },
+        {
+          name: 'Notifications',
+          path: 'components/notifications',
+          component: () => import('@/views/dashboard/component/Notifications'),
+        },
+        {
+          name: 'Icons',
+          path: '/components/icons',
+          component: () => import('@/views/dashboard/component/Icons'),
+        },
+        {
+          name: 'Typography',
+          path: '/components/typography',
+          component: () => import('@/views/dashboard/component/Typography'),
+        },
+        // Tables
+        {
+          name: 'Regular Tables',
+          path: '/tables/regular-tables',
+          component: () => import('@/views/dashboard/tables/RegularTables'),
+        },
+        // Maps
+        {
+          name: 'Google Maps',
+          path: '/maps/google-maps',
+          component: () => import('@/views/dashboard/maps/GoogleMaps'),
+        },
+      ],
     },
   ],
 })

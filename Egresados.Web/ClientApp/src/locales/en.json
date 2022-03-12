@@ -1,5 +1,5 @@
 {
-  "avatar": "Vuetify MD",
+  "avatar": "",
   "buttons": "Buttons",
   "calendar": "Calendar",
   "charts": "Charts",
@@ -38,7 +38,7 @@
   "timeline": "Timeline",
   "typography": "Typography",
   "upgrade": "Upgrade To PRO",
-  "user": "User Profile",
+  "user": "Usuarios",
   "vforms": "Validation Forms",
   "widgets": "Widgets",
   "wizard": "Wizard"

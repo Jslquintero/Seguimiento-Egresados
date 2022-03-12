@@ -180,9 +180,9 @@
               font-size: 20px;
             }
             &.router-link-active {
-              color: $primary !important;
+              color:  rgba(255, 255, 255, 0.54);
               i {
-                color: $primary !important;
+                color: rgba(84, 160, 54, 0.54);
               }
             }
           }

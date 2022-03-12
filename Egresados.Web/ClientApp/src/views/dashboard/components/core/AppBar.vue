@@ -19,7 +19,7 @@
       </v-icon>
 
       <v-icon v-else>
-        mdi-dots-vertical
+        mdi-dots-horizontal
       </v-icon>
     </v-btn>
 
@@ -30,38 +30,7 @@
 
     <v-spacer />
 
-    <v-text-field
-      :label="$t('search')"
-      color="secondary"
-      hide-details
-      style="max-width: 165px;"
-    >
-      <template
-        v-if="$vuetify.breakpoint.mdAndUp"
-        v-slot:append-outer
-      >
-        <v-btn
-          class="mt-n2"
-          elevation="1"
-          fab
-          small
-        >
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-      </template>
-    </v-text-field>
-
     <div class="mx-3" />
-
-    <v-btn
-      class="ml-2"
-      min-width="0"
-      text
-      to="/"
-    >
-      <v-icon>mdi-view-dashboard</v-icon>
-    </v-btn>
-
     <v-menu
       bottom
       left
@@ -77,17 +46,7 @@
           v-bind="attrs"
           v-on="on"
         >
-          <v-badge
-            color="red"
-            overlap
-            bordered
-          >
-            <template v-slot:badge>
-              <span>5</span>
-            </template>
-
-            <v-icon>mdi-bell</v-icon>
-          </v-badge>
+          <v-icon>mdi-earth </v-icon>
         </v-btn>
       </template>
 
@@ -105,20 +64,11 @@
         </div>
       </v-list>
     </v-menu>
-
-    <v-btn
-      class="ml-2"
-      min-width="0"
-      text
-      to="/pages/user"
-    >
-      <v-icon>mdi-account</v-icon>
-    </v-btn>
   </v-app-bar>
 </template>
 
 <script>
-  // Components
+// Components
   import { VHover, VListItem } from 'vuetify/lib'
 
   // Utilities
@@ -133,19 +83,23 @@
           return h(VHover, {
             scopedSlots: {
               default: ({ hover }) => {
-                return h(VListItem, {
-                  attrs: this.$attrs,
-                  class: {
-                    'black--text': !hover,
-                    'white--text secondary elevation-12': hover,
+                return h(
+                  VListItem,
+                  {
+                    attrs: this.$attrs,
+                    class: {
+                      'black--text': !hover,
+                      'white--text secondary elevation-12': hover,
+                    },
+                    props: {
+                      activeClass: '',
+                      dark: hover,
+                      link: true,
+                      ...this.$attrs,
+                    },
                   },
-                  props: {
-                    activeClass: '',
-                    dark: hover,
-                    link: true,
-                    ...this.$attrs,
-                  },
-                }, this.$slots.default)
+                  this.$slots.default,
+                )
               },
             },
           })
@@ -162,11 +116,9 @@
 
     data: () => ({
       notifications: [
-        'Mike John Responded to your email',
-        'You have 5 new tasks',
-        'You\'re now friends with Andrew',
-        'Another Notification',
-        'Another one',
+        'Eventos',
+        'Noticias',
+        'Cerrar Sesion',
       ],
     }),
 

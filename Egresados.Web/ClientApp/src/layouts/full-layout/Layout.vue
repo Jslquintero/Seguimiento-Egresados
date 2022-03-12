@@ -29,9 +29,6 @@
     <horizontal-sidebar v-else />
 
     <customizer v-model="expandOnHover" />
-
-    <footer v-if="!setHorizontalLayout" />
-    <horizontal-footer v-else />
   </v-app>
 </template>
 
@@ -40,8 +37,7 @@
   import VerticalHeader from './vertical-header/VerticalHeader'
   import HorizontalSidebar from './horizontal-sidebar/HorizontalSidebar'
   import VerticalSidebar from './vertical-sidebar/VerticalSidebar'
-  import Footer from './footer/Footer'
-  import HorizontalFooter from './horizontal-footer/HorizontalFooter'
+  import Footer from '../../views/dashboard/components/core/Footer.vue'
   import Customizer from './customizer/Customizer'
   import { mapState, mapMutations } from 'vuex'
   export default {

@@ -237,7 +237,6 @@
 
 <script>
   import UsuarioServices from '../../services/UsuarioServices'
-  import ProveedorServices from '../../services/ProveedorServices'
 
   export default {
     name: 'Listar',
@@ -254,9 +253,10 @@
       roles: [],
       proveedores: [],
       headers: [
-        { text: 'Email', value: 'email' },
         { text: 'Nombre', value: 'name' },
         { text: 'Apellido', value: 'lastName' },
+        { text: 'Cedula', value: 'userName' },
+        { text: 'Correo', value: 'email' },
         { text: 'Roles', value: 'roles' },
         { text: 'Acciones', value: 'actions' },
       ],
@@ -271,7 +271,7 @@
     }),
     created () {
       this.usuarioServices = new UsuarioServices()
-      this.proveedorServices = new ProveedorServices()
+      // this.proveedorServices = new ProveedorServices()
     },
     mounted () {
       this.getList()
@@ -332,25 +332,25 @@
           })
       },
 
-      getListProveedor () {
-        this.proveedorServices.selectList()
-          .then(data => {
-            this.proveedores = data
-            console.log(this.proveedor)
-          })
-          .catch(error => {
-            this.showError(error.response.data.title)
-            console.log(error.response.status)
-          })
-      },
+      // getListProveedor () {
+      //   this.proveedorServices.selectList()
+      //     .then(data => {
+      //       this.proveedores = data
+      //       console.log(this.proveedor)
+      //     })
+      //     .catch(error => {
+      //       this.showError(error.response.data.title)
+      //       console.log(error.response.status)
+      //     })
+      // },
 
-      mostrarProveedores () {
-        if (this.form.roles.includes('Proveedor')) {
-          this.proveedorShow = true
-        } else {
-          this.proveedorShow = false
-        }
-      },
+      // mostrarProveedores () {
+      //   if (this.form.roles.includes('Proveedor')) {
+      //     this.proveedorShow = true
+      //   } else {
+      //     this.proveedorShow = false
+      //   }
+      // },
 
       editItem (item) {
         this.passwordShow = false
@@ -386,8 +386,8 @@
       saveItem () {
         this.$refs.form.validate()
         if (this.$refs.form.validate(true)) {
-          if (this.passwordShow == true) {
-            if (this.form.confirmPassword.trim().toLowerCase() != this.form.password.trim().toLowerCase()) {
+          if (this.passwordShow === true) {
+            if (this.form.confirmPassword.trim().toLowerCase() !== this.form.password.trim().toLowerCase()) {
               this.showError('Las claves no coinciden')
             } else {
               this.usuarioServices.save(this.form)
@@ -404,7 +404,7 @@
             }
           }
 
-          if (this.passwordShow == false) {
+          if (this.passwordShow === false) {
             this.usuarioServices.edit(this.form)
               .then(data => {
                 if (data === '') {

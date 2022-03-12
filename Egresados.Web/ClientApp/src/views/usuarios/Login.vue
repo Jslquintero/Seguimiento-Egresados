@@ -106,7 +106,10 @@
     name: 'Login',
     data: () => ({
       valid: true,
-      form: {},
+      form: {
+        cedula: '6-719-1951',
+        password: 'Admin1234',
+      },
       checkbox: false,
       inputPassword: String,
       passwordRules: [
@@ -123,19 +126,19 @@
     },
     methods: {
       showSuccess (message) {
-        this.$toastr.Add({
-          name: 'UniqueToastName', // this is give you ability to use removeByName method
-          title: 'Success Message', // Toast Title
-          msg: message,
-          type: 'success',
+        this.$swal({
+          titleText: 'Correcto!',
+          text: message,
+          icon: 'succes',
+          confirmButtonText: 'Aceptar',
         })
       },
       showError (message) {
-        this.$toastr.Add({
-          name: 'UniqueToastName', // this is give you ability to use removeByName method
-          title: 'Error Message', // Toast Title
-          msg: message,
-          type: 'error',
+        this.$swal({
+          titleText: 'Error!',
+          text: message,
+          icon: 'error',
+          confirmButtonText: 'Aceptar',
         })
       },
       submit () {
@@ -143,7 +146,7 @@
         if (this.$refs.form.validate(true)) {
           this.usuarioServices.login(this.form)
             .then(data => {
-              this.$router.push({ path: '/home/index' })
+              this.$router.push({ path: '/Dashboard' })
 
               localStorage.setItem('access_user', JSON.stringify(data))
               // this.showSuccess('Entro al sistema correctamente.')
@@ -151,7 +154,7 @@
             })
             .catch(error => {
               if (error.response.status === 401) {
-                this.showError('El mail o password es invalido.')
+                this.showError('Contraseña o cédula incorrectas')
               } else {
                 this.showError(error.response.data.title)
               }

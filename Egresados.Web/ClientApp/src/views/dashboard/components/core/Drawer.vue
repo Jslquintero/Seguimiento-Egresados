@@ -5,8 +5,8 @@
     :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
-    :src="barImage"
     mobile-break-point="960"
+    mini-variant-width="70"
     app
     width="260"
     v-bind="$attrs"
@@ -17,82 +17,77 @@
         v-bind="props"
       />
     </template>
+    <v-list-item
+      two-line
+      class="profile-bg"
+    >
+      <v-list-item-avatar>
+        <img
+          :src="`${usuario.url}`"
+          :alt="usuario.url"
+        >
+      </v-list-item-avatar>
 
-    <v-divider class="mb-1" />
+      <v-list-item-content>
+        <v-list-item-subtitle class="text-caption">
+          {{ usuario.name }} {{ usuario.lastName }}
+        </v-list-item-subtitle>
+        <v-list-item-subtitle class="text-caption" />
+      </v-list-item-content>
+    </v-list-item>
+    <v-divider />
 
     <v-list
       dense
       nav
     >
-      <v-list-item>
-        <v-list-item-avatar
-          class="align-self-center"
-          color="white"
-          contain
-        >
-          <v-img
-            src="https://demos.creative-tim.com/vuetify-material-dashboard/favicon.ico"
-            max-height="30"
+      <v-list
+        expand
+        nav
+        class="mt-1"
+      >
+        <template v-for="(item, i) in items">
+          <!---If Sidebar Caption -->
+          <v-row
+            v-if="item.header"
+            :key="item.header"
+            align="center"
+          >
+            <v-col cols="12">
+              <v-subheader
+                v-if="item.header"
+                class="d-block text-truncate"
+              >
+                {{ item.header }}
+              </v-subheader>
+            </v-col>
+          </v-row>
+          <!---If Sidebar Caption -->
+          <BaseItemGroup
+            v-else-if="item.children"
+            :key="`group-${i}`"
+            class="icon-size"
+            :item="item"
+            :icon="item.icon"
           />
-        </v-list-item-avatar>
 
-        <v-list-item-content>
-          <v-list-item-title
-            class="text-h4"
-            v-text="profile.title"
+          <BaseItem
+            v-else
+            :key="`item-${i}`"
+            :item="item"
           />
-        </v-list-item-content>
-      </v-list-item>
+        </template>
+        <!---Sidebar Items -->
+      </v-list>
     </v-list>
-
-    <v-divider class="mb-2" />
-
-    <v-list
-      expand
-      nav
-    >
-      <!-- Style cascading bug  -->
-      <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
-      <div />
-
-      <template v-for="(item, i) in computedItems">
-        <base-item-group
-          v-if="item.children"
-          :key="`group-${i}`"
-          :item="item"
-        >
-          <!--  -->
-        </base-item-group>
-
-        <base-item
-          v-else
-          :key="`item-${i}`"
-          :item="item"
-        />
-      </template>
-
-      <!-- Style cascading bug  -->
-      <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
-      <div />
-    </v-list>
-
-    <template v-slot:append>
-      <base-item
-        :item="{
-          title: $t('upgrade'),
-          icon: 'mdi-package-up',
-          to: '/upgrade',
-        }"
-      />
-    </template>
+    <v-divider />
   </v-navigation-drawer>
 </template>
 
 <script>
-  // Utilities
-  import {
-    mapState,
-  } from 'vuex'
+// Utilities
+  import { mapState } from 'vuex'
+  import UsuarioServices from '../../../../services/UsuarioServices'
 
   export default {
     name: 'DashboardCoreDrawer',
@@ -106,25 +101,28 @@
 
     data: () => ({
       items: [
+        { header: 'Administrador' },
         {
-          icon: 'mdi-view-dashboard',
-          title: 'dashboard',
-          to: '/',
-        },
-        {
+          group: '/usuarios',
+          model: false,
           icon: 'mdi-account',
-          title: 'user',
-          to: '/pages/user',
+          title: 'Usuarios',
+          class: 'two-column',
+          to: '/usuarios',
+          autorizeRoles: 'Administrador',
+          children: [
+            {
+              icon: 'mdi-account',
+              title: 'Listado de Usuarios',
+              to: 'listar',
+              autorizeRoles: 'Administrador',
+            },
+          ],
         },
         {
-          title: 'rtables',
+          title: 'Tablas',
           icon: 'mdi-clipboard-outline',
           to: '/tables/regular-tables',
-        },
-        {
-          title: 'typography',
-          icon: 'mdi-format-font',
-          to: '/components/typography',
         },
         {
           title: 'icons',
@@ -132,18 +130,13 @@
           to: '/components/icons',
         },
         {
-          title: 'google',
-          icon: 'mdi-map-marker',
-          to: '/maps/google-maps',
-        },
-        {
           title: 'notifications',
           icon: 'mdi-bell',
           to: '/components/notifications',
         },
       ],
+      usuario: {},
     }),
-
     computed: {
       ...mapState(['barColor', 'barImage']),
       drawer: {
@@ -164,72 +157,79 @@
         }
       },
     },
-
+    created () {
+      this.usuarioServices = new UsuarioServices()
+    },
+    mounted () {
+      this.getUser()
+    },
     methods: {
-      mapItem (item) {
-        return {
-          ...item,
-          children: item.children ? item.children.map(this.mapItem) : undefined,
-          title: this.$t(item.title),
-        }
+      getUser () {
+        const usuario = this.usuarioServices.getUser()
+        this.usuario = usuario
+        this.usuario.url =
+          'https://ui-avatars.com/api/?background=F00095&color=fff&name=' +
+          this.usuario.name +
+          this.usuario.lastName +
+          ''
       },
     },
   }
 </script>
 
-<style lang="sass">
-  @import '~vuetify/src/styles/tools/_rtl.sass'
+<style lang="scss">
+#core-navigation-drawer {
+  box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
 
-  #core-navigation-drawer
-    .v-list-group__header.v-list-item--active:before
-      opacity: .24
+  .v-navigation-drawer__border {
+    display: none;
+  }
 
-    .v-list-item
-      &__icon--text,
-      &__icon:first-child
-        justify-content: center
-        text-align: center
-        width: 20px
+  .v-list {
+    padding: 8px 15px;
+  }
 
-        +ltr()
-          margin-right: 24px
-          margin-left: 12px !important
+  .v-list-item {
+    min-height: 35px;
 
-        +rtl()
-          margin-left: 24px
-          margin-right: 12px !important
+    &__icon--text,
+    &__icon:first-child {
+      justify-content: center;
+      text-align: center;
+      width: 20px;
+    }
+  }
 
-    .v-list--dense
-      .v-list-item
-        &__icon--text,
-        &__icon:first-child
-          margin-top: 10px
+  .v-list-item__icon i {
+    width: 20px;
+  }
 
-    .v-list-group--sub-group
-      .v-list-item
-        +ltr()
-          padding-left: 8px
+  .icon-size .v-list-group__items i {
+    width: 16px;
+    font-size: 16px;
+  }
 
-        +rtl()
-          padding-right: 8px
+  .profile-bg {
+    &.theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+      opacity: 1;
+    }
 
-      .v-list-group__header
-        +ltr()
-          padding-right: 0
+    .v-avatar {
+      padding: 15px 0;
+    }
+  }
 
-        +rtl()
-          padding-right: 0
+  .theme--dark.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+    opacity: 0.5;
 
-        .v-list-item__icon--text
-          margin-top: 19px
-          order: 0
+    &:hover {
+      opacity: 1;
+    }
+  }
 
-        .v-list-group__header__prepend-icon
-          order: 2
-
-          +ltr()
-            margin-right: 8px
-
-          +rtl()
-            margin-left: 8px
+  .v-list .v-list-item--active {
+    color: white;
+  }
+}
 </style>
