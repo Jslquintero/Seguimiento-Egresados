@@ -111,6 +111,7 @@ namespace Egresados.Api.Controllers
                         Name = model.Name,
                         LastName= model.LastName,
                         UserName = model.Cedula, //UserName es el campo que almacena la cedula
+                        Email = model.Email,
                         Roles = model.Roles
                     
                     };

@@ -17,16 +17,19 @@ namespace Egresados.Api.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [EmailAddress]
         [Display(Name = "Cedula")]
         public string Cedula { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         //[StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-        public int? ProveedorId { get; set; }
         public string ConfirmPassword { get; set; }
 
         public string ReturnUrl { get; set; }

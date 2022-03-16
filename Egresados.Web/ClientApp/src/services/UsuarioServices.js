@@ -12,6 +12,7 @@ export default class UsuarioServices {
 	}
 
 	registrar (model) {
+		debugger
 		return axios.post(process.env.VUE_APP_URL_API + 'usuarios/registrar', model).then(res => res.data)
 	}
 

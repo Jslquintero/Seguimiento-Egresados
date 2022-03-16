@@ -42,6 +42,11 @@ export default new Router({
           path: 'Listar',
           component: () => import('@/views/usuarios/Listar'),
         },
+        {
+          name: 'Lista de Usuarios en espera',
+          path: 'ListaEspera',
+          component: () => import('@/views/usuarios/ListaEspera'),
+        },
       ],
     },
     //  dashboard routes start
@@ -63,7 +68,7 @@ export default new Router({
         },
         {
           name: 'Notifications',
-          path: 'components/notifications',
+          path: '/components/notifications',
           component: () => import('@/views/dashboard/component/Notifications'),
         },
         {

@@ -38,48 +38,46 @@
     <v-divider />
 
     <v-list
-      dense
+      expand
       nav
+      class="mt-1"
     >
-      <v-list
-        expand
-        nav
-        class="mt-1"
-      >
-        <template v-for="(item, i) in items">
-          <!---If Sidebar Caption -->
-          <v-row
-            v-if="item.header"
-            :key="item.header"
-            align="center"
-          >
-            <v-col cols="12">
-              <v-subheader
-                v-if="item.header"
-                class="d-block text-truncate"
-              >
-                {{ item.header }}
-              </v-subheader>
-            </v-col>
-          </v-row>
-          <!---If Sidebar Caption -->
-          <BaseItemGroup
-            v-else-if="item.children"
-            :key="`group-${i}`"
-            class="icon-size"
-            :item="item"
-            :icon="item.icon"
-          />
+      <template v-for="(item, i) in items">
+        <!---If Sidebar Caption -->
+        <v-row
+          v-if="item.header"
+          :key="item.header"
+          align="center"
+        >
+          <v-col cols="12">
+            <v-subheader
+              v-if="item.header"
+              class="d-block text-truncate"
+            >
+              {{
+                item.header
+              }}
+            </v-subheader>
+          </v-col>
+        </v-row>
+        <!---If Sidebar Caption -->
+        <BaseItemGroup
+          v-else-if="item.children"
+          :key="`group-${i}`"
+          class="icon-size"
+          :item="item"
+        />
 
-          <BaseItem
-            v-else
-            :key="`item-${i}`"
-            :item="item"
-          />
-        </template>
-        <!---Sidebar Items -->
-      </v-list>
+        <BaseItem
+          v-else
+          :key="`item-${i}`"
+          :item="item"
+        />
+      </template>
+      <!---Sidebar Items -->
     </v-list>
+    <v-divider />
+
     <v-divider />
   </v-navigation-drawer>
 </template>
@@ -87,6 +85,7 @@
 <script>
 // Utilities
   import { mapState } from 'vuex'
+  import VerticalSidebarItems from './VerticalSidebarItems'
   import UsuarioServices from '../../../../services/UsuarioServices'
 
   export default {
@@ -100,41 +99,7 @@
     },
 
     data: () => ({
-      items: [
-        { header: 'Administrador' },
-        {
-          group: '/usuarios',
-          model: false,
-          icon: 'mdi-account',
-          title: 'Usuarios',
-          class: 'two-column',
-          to: '/usuarios',
-          autorizeRoles: 'Administrador',
-          children: [
-            {
-              icon: 'mdi-account',
-              title: 'Listado de Usuarios',
-              to: 'listar',
-              autorizeRoles: 'Administrador',
-            },
-          ],
-        },
-        {
-          title: 'Tablas',
-          icon: 'mdi-clipboard-outline',
-          to: '/tables/regular-tables',
-        },
-        {
-          title: 'icons',
-          icon: 'mdi-chart-bubble',
-          to: '/components/icons',
-        },
-        {
-          title: 'notifications',
-          icon: 'mdi-bell',
-          to: '/components/notifications',
-        },
-      ],
+      items: [],
       usuario: {},
     }),
     computed: {
@@ -157,21 +122,64 @@
         }
       },
     },
+    watch: {
+      '$vuetify.breakpoint.smAndDown' (val) {
+        this.$emit('update:expandOnHover', !val)
+      },
+    },
     created () {
       this.usuarioServices = new UsuarioServices()
     },
     mounted () {
-      this.getUser()
+      // this.getUser();
+      this.verticalSidebarGetUser()
+      this.verticalSidebarItemsPorRoles()
     },
     methods: {
-      getUser () {
+      verticalSidebarGetUser () {
         const usuario = this.usuarioServices.getUser()
+
         this.usuario = usuario
         this.usuario.url =
           'https://ui-avatars.com/api/?background=F00095&color=fff&name=' +
           this.usuario.name +
           this.usuario.lastName +
           ''
+
+        usuario.roles.forEach((element) => {
+          if (element === 'Administrativo') {
+            this.visibilidadAdministrativo = true
+          }
+          if (element === 'Administrador') {
+            this.visibilidadAdministrativo = true
+          }
+        })
+      },
+
+      verticalSidebarItemsPorRoles () {
+        const list = []
+        // verificamos menu
+        VerticalSidebarItems.forEach((element) => {
+          if (
+            this.visibilidadAdministrativo === true &&
+            (element.autorizeRoles === 'Administrativo' || element.autorizeRoles === '')
+          ) {
+            // verificamos submenu
+            let i = 0
+            element.children.forEach((subElement) => {
+              if (
+                this.visibilidadAdministrativo === true &&
+                subElement.autorizeRoles === 'Administrador'
+              ) {
+                element.children.splice(i, 1)
+              }
+              i++
+            })
+            list.push(element)
+          }
+        })
+
+        this.items = list
       },
     },
   }
