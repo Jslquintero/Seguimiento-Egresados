@@ -209,17 +209,17 @@
 
     <v-card-text>
       <v-row>
-        <v-col>
-          <v-btn
-            x-large
-            color="#008C95"
-            rounded
-            dark
-            @click="addItem"
-          >
-            Agregar Usuario
-          </v-btn>
-        </v-col>
+          <v-col>
+              <!-- <v-btn
+      x-large
+      color="#008C95"
+      rounded
+      dark
+      @click="addItem"
+    >
+      Agregar Usuario
+    </v-btn> -->
+          </v-col>
         <v-col />
       </v-row>
     </v-card-text>
@@ -334,13 +334,13 @@
           })
       },
 
-      addItem () {
+      /* addItem () {
         this.form = {}
         this.passwordShow = true
         this.emailShow = true
         this.form.title = 'Nuevo Usuario'
         this.showDialogForm()
-      },
+      }, */
 
       deleteItem () {
 
@@ -349,7 +349,7 @@
       saveItem () {
         this.$refs.form.validate()
         if (this.$refs.form.validate(true)) {
-          if (this.passwordShow === true) {
+          /* if (this.passwordShow === true) {
             if (this.form.confirmPassword.trim().toLowerCase() !== this.form.password.trim().toLowerCase()) {
               this.showError('Las claves no coinciden')
             } else {
@@ -366,7 +366,7 @@
                   this.showError(error.response.data.title)
                 })
             }
-          }
+          } */
 
           if (this.passwordShow === false) {
             this.usuarioServices.edit(this.form)
