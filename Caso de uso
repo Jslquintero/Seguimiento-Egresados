@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-31T23:49:31.818Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="pRcf-wPLKOkkWAa6JwJr" version="17.2.4" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-03-31T23:57:26.063Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="_RbAWI-iz4FUjv5gSXEW" version="17.2.4" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -434,6 +434,17 @@
         </mxCell>
         <mxCell id="ZS393QdUM0ocgv7dwVsJ-1" value="Editar plaza trabajo" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="H5lQR3PPQb9tB3SsD7-E" name="Modulo Empresa (Recursos Humanos)">
+    <mxGraphModel dx="1662" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="38Vq5-p1HVjJcPBfvbfB-1" value="Empresa (recursos humanos)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="270" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
