@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T00:31:43.034Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="-CW4JwQ8XSm9be4T_Fj7" version="17.2.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T00:36:02.149Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="MelRsD5ejQhAwCCwGKDs" version="17.2.4" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -384,7 +384,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZRWDf_Hj6uvGdLw47oIn" name="Modulo Reclutador">
-    <mxGraphModel dx="1662" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -424,7 +424,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-6" value="Aceptar Postulacion" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="320" width="140" height="60" as="geometry" />
+          <mxGeometry x="410" y="320" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="T1cxmti9wlleSTlFRHnA-17" target="T1cxmti9wlleSTlFRHnA-19">
           <mxGeometry relative="1" as="geometry" />
@@ -439,22 +439,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-18" value="Egresado" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="20" width="30" height="60" as="geometry" />
+          <mxGeometry x="90" y="430" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-19" value="Actualizar estado" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="320" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="T1cxmti9wlleSTlFRHnA-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="T1cxmti9wlleSTlFRHnA-25" target="T1cxmti9wlleSTlFRHnA-2">
+        <mxCell id="TC-YePVhOE7DEyjzUST8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="T1cxmti9wlleSTlFRHnA-25" target="T1cxmti9wlleSTlFRHnA-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-25" value="Postular" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="20" width="140" height="60" as="geometry" />
+          <mxGeometry x="410" y="430" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="T1cxmti9wlleSTlFRHnA-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="T1cxmti9wlleSTlFRHnA-28" target="T1cxmti9wlleSTlFRHnA-25">
+        <mxCell id="TC-YePVhOE7DEyjzUST8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" edge="1" parent="1" source="T1cxmti9wlleSTlFRHnA-28" target="T1cxmti9wlleSTlFRHnA-25">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-28" value="Buscar plaza de trabajo" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="950" y="20" width="160" height="60" as="geometry" />
+          <mxGeometry x="180" y="430" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T1cxmti9wlleSTlFRHnA-32" value="Validar identidad" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="710" y="180" width="140" height="60" as="geometry" />
@@ -464,6 +464,12 @@
         </mxCell>
         <mxCell id="ZS393QdUM0ocgv7dwVsJ-1" value="Editar plaza trabajo" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-YePVhOE7DEyjzUST8-1" value="&lt;h1&gt;Crud&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;font face=&quot;arial, sans-serif&quot;&gt;El reclutador puede crear, editar y eliminar cualquier plaza de trabajo creada&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="540" width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="TC-YePVhOE7DEyjzUST8-2" value="&lt;h1&gt;Aceptar postulacion&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;font face=&quot;arial, sans-serif&quot;&gt;Puede ver una lista de egresados segun la plaza de trabajo y aceptar la postulacion , el sistema debera actualizar y mostrar que ya se acabo el periodo de busqueda.&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="760" width="430" height="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
