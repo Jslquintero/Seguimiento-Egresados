@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T23:57:18.845Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="3_ronkxQDKvnrP5V0NxP" version="17.4.0" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T23:57:53.815Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="AXRHhfZeHxwYvzFFYLsO" version="17.4.0" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2272" dy="1907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -44,7 +44,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ps1h4QxULYfLVLRuHkIJ-35" value="Registrar Cuenta" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="250" y="140" width="120" height="60" as="geometry" />
+          <mxGeometry x="260" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ps1h4QxULYfLVLRuHkIJ-80" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-520" y="150" width="30" height="60" as="geometry" />
