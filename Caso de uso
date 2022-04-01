@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T00:31:06.677Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="GmMt5XoBlnEHB8oPwgjA" version="17.2.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T00:31:43.034Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="-CW4JwQ8XSm9be4T_Fj7" version="17.2.4" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -376,6 +376,9 @@
         </mxCell>
         <mxCell id="5GPAQcfUvSOUJR7MoIY9-6" value="&lt;h1&gt;Plazas de trabajo&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif ; font-size: 16px ; font-weight: normal&quot;&gt;Puede visualizar las plazas de trabajo existentes y postular&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="2490" y="980" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-7" value="&lt;h1&gt;&lt;span&gt;Chat&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;font face=&quot;arial, sans-serif&quot;&gt;&lt;span style=&quot;font-size: 16px ; font-weight: 400&quot;&gt;sistema de mensajeria instantanea basada en contactos que esten de amigos o no&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="1100" width="430" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
