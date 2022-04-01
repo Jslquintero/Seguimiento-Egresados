@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T00:12:09.995Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="g4t2EbqhhnMAWA2SXXDS" version="17.2.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T00:31:06.677Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="GmMt5XoBlnEHB8oPwgjA" version="17.2.4" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -73,6 +73,15 @@
         <mxCell id="8Nh4FNoyNVWKhMdbQ_Sm-7" value="&lt;div&gt;Dep de planificacion y&amp;nbsp;&lt;/div&gt;&lt;div&gt;admin de recursos humanos&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="-290" y="80" width="30" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="oNdfcSfOL_IFBwVw255J-1" value="&lt;h1&gt;&lt;span&gt;Registro Egresado&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;El egresado puede registrarse libremente y&amp;nbsp; que su identidad la valide el sistema utilizando la base de datos de la universidad&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="390" width="340" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="oNdfcSfOL_IFBwVw255J-2" value="&lt;h1&gt;&lt;span&gt;Registro Dep. Admin y Rec Hum&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;Las cuentas para ese departamento las devera crear el administrador del sistema y otorgarles el rol manualmente&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="580" width="430" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="oNdfcSfOL_IFBwVw255J-3" value="&lt;h1&gt;&lt;span&gt;Registro Reclutador y Empresa&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;Las cuentas deberan llenar un formulario en la pagina de login, para proporcionar informacion veridica, luego&amp;nbsp; de ser aceptados se le debe enviar un mensaje al correo con las credenciales&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="770" width="430" height="140" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -135,11 +144,14 @@
         <mxCell id="aIZwhLiCOsD10jCyJKbe-22" value="Iniciar Sesion" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="380" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="qNKk7F3KA5EgLBLG4CWT-1" value="&lt;h1&gt;Inicio de sesion&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;El egresado debe ser validado mediante la base de datos de la universidad y el resto de usuarios utilizando la base de datos del sistema&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="680" width="340" height="170" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="x-4EmDk2QZcQmwv1ljyd" name="Modulo Egresado">
-    <mxGraphModel dx="2374" dy="2301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2370" dy="2502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -349,6 +361,21 @@
         </mxCell>
         <mxCell id="Z1ALo9aRsaNJIrldC5EL-71" value="Validar Identidad" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1290" y="-80" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-1" value="&lt;h1&gt;Perfil&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;El egresado debe ser capaz rellenar todos los datos sobre su perfil y actualizarlos&lt;br&gt;esto incluye:&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoListParagraphCxSpFirst&quot; style=&quot;text-indent: -0.25in&quot;&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;foto de perfil&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;cargo laboral actual&lt;/span&gt;&lt;span style=&quot;font-family: &amp;#34;times new roman&amp;#34; ; text-indent: -0.25in&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;pequeña biografia&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;nombre completo&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;lugar donde trabaja actualmente&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;email&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;lugar de residencia&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;ciudad&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;pais&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Contraseña&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="360" width="430" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-3" value="&lt;h1&gt;Compartidos&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;font face=&quot;arial, sans-serif&quot;&gt;Podra ver el historial de post compartidos y sera capaz de borrar, editar o cambiar el permiso de quienes puedan verlo&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2430" y="360" width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-4" value="&lt;h1&gt;Amigos&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif ; font-size: 16px ; font-weight: normal&quot;&gt;Sera capaz de buscar y administrar amigos ( eliminar y bloquear amigos)&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="840" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-5" value="&lt;h1&gt;Eventos&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif ; font-size: 16px ; font-weight: normal&quot;&gt;Puede visualizar los eventos existentes, asistir o&amp;nbsp; darse de alta en cualquier momento,&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2490" y="820" width="430" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5GPAQcfUvSOUJR7MoIY9-6" value="&lt;h1&gt;Plazas de trabajo&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-family: &amp;#34;arial&amp;#34; , sans-serif ; font-size: 16px ; font-weight: normal&quot;&gt;Puede visualizar las plazas de trabajo existentes y postular&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2490" y="980" width="430" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
