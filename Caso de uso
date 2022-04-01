@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T00:07:55.689Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="r0G4NS95PzP6UJRVbD2z" version="17.2.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T00:08:27.425Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="JcxSWOwcApCyWGLIT8fz" version="17.2.4" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -527,7 +527,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AdZctK4t-bl0yCTUU0jm-10" value="Dar alta evento" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="290" width="140" height="60" as="geometry" />
+          <mxGeometry x="260" y="340" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Ni9kgCbKG0QNyjsyQc3M-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="AdZctK4t-bl0yCTUU0jm-12" target="AdZctK4t-bl0yCTUU0jm-15">
           <mxGeometry relative="1" as="geometry" />
