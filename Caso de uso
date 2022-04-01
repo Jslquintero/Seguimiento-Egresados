@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-01T00:38:10.933Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="6vlOXA4K61xWYhbY379B" version="17.2.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-04-01T00:39:21.738Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="CrYt38TAkkcQ5dSjaVCy" version="17.2.4" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2805" dy="2089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -614,6 +614,9 @@
         </mxCell>
         <mxCell id="olmYnxrndk-SHE_A5IUz-6" value="Dar alta noticia" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="680" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ra4dehG9b1Cyigs3LPEJ-1" value="&lt;h1&gt;Crud&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;p class=&quot;MsoNormal&quot;&gt;&lt;font face=&quot;arial, sans-serif&quot;&gt;El departamento debera realizar los cruds de eventos y noticias segun la necesidad de la universidad&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="840" y="470" width="430" height="230" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
