@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-04T06:30:55.634Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="JPzMC8vn-FvdPJXeFbne" version="17.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-04-04T06:31:31.866Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="oz4B30l9JaIGo1ZKP5gD" version="17.4.0" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2523" dy="2049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -131,6 +131,18 @@
         </mxCell>
         <mxCell id="r0vkeqC2_D9JqhM1JqS9-25" value="Recuperar Contraseña" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="290" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="D4iCffSHX1yDk3YyKhZL-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="D4iCffSHX1yDk3YyKhZL-1" target="r0vkeqC2_D9JqhM1JqS9-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4iCffSHX1yDk3YyKhZL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="D4iCffSHX1yDk3YyKhZL-1" target="r0vkeqC2_D9JqhM1JqS9-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4iCffSHX1yDk3YyKhZL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="D4iCffSHX1yDk3YyKhZL-1" target="r0vkeqC2_D9JqhM1JqS9-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="D4iCffSHX1yDk3YyKhZL-1" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="120" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
