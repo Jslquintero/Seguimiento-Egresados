@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-04T06:24:50.880Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="U1-tSjKMF-dh_53TR4VL" version="17.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-04-04T06:25:20.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="H0seEOsO90JGGV4rT9AC" version="17.4.0" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2523" dy="2049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -17,7 +17,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ps1h4QxULYfLVLRuHkIJ-17" value="Reclutador y recursos humanos" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="30" width="30" height="60" as="geometry" />
+          <mxGeometry x="-500" y="50" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uDYenzzOM_alLlbksWme-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="ps1h4QxULYfLVLRuHkIJ-33" target="ps1h4QxULYfLVLRuHkIJ-35" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -35,7 +35,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8Nh4FNoyNVWKhMdbQ_Sm-1" value="Llenar Formulario" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-155" y="30" width="120" height="60" as="geometry" />
+          <mxGeometry x="-155" y="50" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8Nh4FNoyNVWKhMdbQ_Sm-7" value="&lt;div&gt;Dep de planificacion y&amp;nbsp;&lt;/div&gt;&lt;div&gt;admin de recursos humanos&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-500" y="180" width="30" height="60" as="geometry" />
@@ -51,6 +51,18 @@
         </mxCell>
         <mxCell id="uDYenzzOM_alLlbksWme-6" value="Otorgar cuenta" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-320" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pFo8BAfQkUlJWaoAGY8I-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pFo8BAfQkUlJWaoAGY8I-1" target="ps1h4QxULYfLVLRuHkIJ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pFo8BAfQkUlJWaoAGY8I-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pFo8BAfQkUlJWaoAGY8I-1" target="8Nh4FNoyNVWKhMdbQ_Sm-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pFo8BAfQkUlJWaoAGY8I-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="pFo8BAfQkUlJWaoAGY8I-1" target="ps1h4QxULYfLVLRuHkIJ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pFo8BAfQkUlJWaoAGY8I-1" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="40" width="30" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
