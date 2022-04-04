@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-04T06:25:20.661Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="H0seEOsO90JGGV4rT9AC" version="17.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-04-04T06:26:34.820Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36" etag="FwkZtinzztfo_fI21nF7" version="17.4.0" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2523" dy="2049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -39,9 +39,6 @@
         </mxCell>
         <mxCell id="8Nh4FNoyNVWKhMdbQ_Sm-7" value="&lt;div&gt;Dep de planificacion y&amp;nbsp;&lt;/div&gt;&lt;div&gt;admin de recursos humanos&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-500" y="180" width="30" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="oNdfcSfOL_IFBwVw255J-3" value="&lt;h1&gt;&lt;span&gt;Registro Reclutador y Empresa&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;Las cuentas deberan llenar un formulario en la pagina de login, para proporcionar informacion veridica, luego&amp;nbsp; de ser aceptados se le debe enviar un mensaje al correo con las credenciales&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-370" y="500" width="430" height="140" as="geometry" />
         </mxCell>
         <mxCell id="uDYenzzOM_alLlbksWme-3" value="Sistema Egresados" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="-155" y="-140" width="120" height="20" as="geometry" />
