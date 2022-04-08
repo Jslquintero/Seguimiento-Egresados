@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-08T21:24:25.792Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="V6KlFwr2y53_Dj6aRQN-" version="17.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-04-08T21:30:43.099Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="wIAUUhcNzPDK4c3UNynm" version="17.4.0" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2035" dy="1773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -154,7 +154,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="x-4EmDk2QZcQmwv1ljyd" name="Modulo Egresado">
-    <mxGraphModel dx="2272" dy="1907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2523" dy="2049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -292,13 +292,13 @@
         <mxCell id="-qiXybSb5qSjjH_kc9IB-33" value="Remover asistencia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="710" y="765" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="-qiXybSb5qSjjH_kc9IB-35" value="Asistir" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="-qiXybSb5qSjjH_kc9IB-35" value="Postular" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="703.5" y="970" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="-qiXybSb5qSjjH_kc9IB-36" value="Compartir evento" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="-qiXybSb5qSjjH_kc9IB-36" value="Compartir trabajo" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="702.5" y="1120" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="-qiXybSb5qSjjH_kc9IB-37" value="Remover asistencia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="-qiXybSb5qSjjH_kc9IB-37" value="Remover postulacion" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="704.5" y="1050" width="140" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ZRXOohyxK37Mtd1f47yP-3" value="Login" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" parent="1" vertex="1">
@@ -309,6 +309,9 @@
             <mxPoint x="-10" y="224.38" as="sourcePoint" />
             <mxPoint x="150" y="224.38" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="kzR2Pfw7VgZVlKZM3zV1-1" value="&lt;h1&gt;Descripcion&lt;/h1&gt;&lt;p&gt;En este modulo el usuario egresado será capaz de administrar :&lt;br&gt;&lt;br&gt;&lt;br&gt;Post: Aquí podrá hacer el crud correspondiente a los post&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Amigos: tendrá permitido agregar a los demas egresados que encuentre en la paltaforma, tambien podra enviar mensajes y de ser necesario bloquear y/o eliminar&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Lista evento: podra revisar a detalle los eventos disponibles realizados por la universidad, podra asistir o quitar su asistencia y lo mas importante, podra compartir el evento como un post , para que sus amigos puedan verlo tambien&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Lista trabajo: al igual que el evento, podra realizar las acciones basicas como postular para el trabajo o remover postulacion, al igual que compartir la plaza de trabajo mediante un post&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="410" width="411" height="360" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
