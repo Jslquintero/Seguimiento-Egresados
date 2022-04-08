@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-08T21:33:16.507Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="JJAnygczgkCMBVxKoJcI" version="17.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2022-04-08T21:35:45.580Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="-79KCrOYPL2qikhENumC" version="17.4.0" type="github" pages="5">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2035" dy="1773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -311,7 +311,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZRWDf_Hj6uvGdLw47oIn" name="Modulo Empresa">
-    <mxGraphModel dx="2881" dy="1153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2272" dy="807" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -356,6 +356,9 @@
             <mxPoint x="-80" y="474.38" as="sourcePoint" />
             <mxPoint x="80" y="474.3800000000001" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="yWBnuYwf_4yKprd5aLlV-1" value="&lt;h1&gt;Descripcion&lt;/h1&gt;&lt;p&gt;La empresa podrá ver un listado de egresados de interes y llenar encuestas de satisfaccion proporcionadas por la universidad, tambien sera capaz de realizar el crud para las plazas de trabajo&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="720" width="681" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -408,6 +411,9 @@
             <mxPoint x="-280" y="319.38" as="sourcePoint" />
             <mxPoint x="-120" y="319.3800000000001" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="1mj9cyEbjk3MUnPgmAQ3-1" value="&lt;h1&gt;Descripcion&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;El departamento estará encargado del crud de eventos dentro de la universidad y tambien podra ver las personas que esten participando en el mismo&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-250" y="630" width="681" height="190" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
