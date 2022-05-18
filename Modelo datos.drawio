@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-05-18T22:07:47.740Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="kXWwC5ybBiCbJ0bsbKAU" version="18.0.6" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2022-05-18T22:20:07.949Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36" etag="hCAUnQGVerWd7fuA0BQn" version="18.0.6" type="github" pages="6">
   <diagram id="5eBOPWXIhYEufeksKNHc" name="Modulo Registro">
     <mxGraphModel dx="2272" dy="1907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -61,9 +61,6 @@
         <mxCell id="pFo8BAfQkUlJWaoAGY8I-1" value="Usuario" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="-710" y="40" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="SC7xf-3za-s-6bOBQMBH-1" value="&lt;h1&gt;Descripcion&lt;/h1&gt;&lt;p&gt;El usuario llenará el formulario con sus datos (cédula , nombre , correo y contraseña)&amp;nbsp; y estos serán validados mediante un web service proporcionado por la universidad, de esta forma los usuarios de egresados y empresas podrán acceder facilmente. El departamento de planificacion será otorgado de sus cuentas por el administrador del sistema&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-435.5" y="440" width="681" height="190" as="geometry" />
-        </mxCell>
         <mxCell id="SC7xf-3za-s-6bOBQMBH-6" value="Sys Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="340" y="240" width="30" height="60" as="geometry" />
         </mxCell>
@@ -90,7 +87,7 @@
         <mxCell id="SI2vPI768RyNfb2udlQi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#008a00;strokeColor=#005700;strokeWidth=5;" parent="1" source="r0vkeqC2_D9JqhM1JqS9-5" target="r0vkeqC2_D9JqhM1JqS9-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SI2vPI768RyNfb2udlQi-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0F97;" parent="1" source="r0vkeqC2_D9JqhM1JqS9-5" target="r0vkeqC2_D9JqhM1JqS9-25" edge="1">
+        <mxCell id="SI2vPI768RyNfb2udlQi-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0F97;strokeWidth=3;" parent="1" source="r0vkeqC2_D9JqhM1JqS9-5" target="r0vkeqC2_D9JqhM1JqS9-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="r0vkeqC2_D9JqhM1JqS9-5" value="Empresa" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
@@ -355,7 +352,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="jfAmvf6OFEC4bzsVT70f" name="Modulo depártamento de planificacion y administracion de recursos humanos">
-    <mxGraphModel dx="2272" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2272" dy="807" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
