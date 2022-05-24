@@ -28,7 +28,7 @@ namespace Egresados.Services
             return result;
         }
 
-        public async Task<string> CalcularNumero(Perfil entidad)
+        public async Task<string> GenerarId(Perfil entidad)
         {
             var random = new Random();
             var bytes_array = new byte[32];
@@ -53,7 +53,7 @@ namespace Egresados.Services
                    
                     if (entidad.Id == "")
                     {
-                        var Id = await CalcularNumero(entidad);
+                        var Id = await GenerarId(entidad);
                         entidad.Id = Id;
                         entidad.FechaAlta = DateTime.Now;
                         await _perfiles.InsertOneAsync(entidad);

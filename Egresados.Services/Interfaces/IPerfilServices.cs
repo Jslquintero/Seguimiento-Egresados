@@ -12,6 +12,5 @@ namespace Egresados.Services.Interfaces
     {
         Task<List<Perfil>> GetPerfilesAsync();
         Task<Perfil> Save(Perfil perfil);
-        Task<Perfil> Delete(string id);
     }
 }
