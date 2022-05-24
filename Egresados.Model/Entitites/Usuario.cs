@@ -19,7 +19,6 @@ namespace Egresados.Model.Entities
         public string Name { get; set; }
         public string LastName { get; set; }
 
-        public int? ProveedorId { get; set; }
         #endregion
 
         #region Calculados

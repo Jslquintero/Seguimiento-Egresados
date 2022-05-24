@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            },
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[13.15.9, )"
@@ -277,9 +281,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.1, )"
             }
           },
           "imports": [

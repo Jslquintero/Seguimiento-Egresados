@@ -161,7 +161,7 @@ namespace Egresados.Api.Controllers
                     user.Name = model.Name;
                     user.LastName = model.LastName;
                     user.Roles = model.Roles;
-                    user.ProveedorId = model.ProveedorId != null ? model.ProveedorId : null;
+                
 
 
                     //Removemos todos los roles
@@ -238,7 +238,7 @@ namespace Egresados.Api.Controllers
                 LastName = usuario.LastName,
                 Cedula = usuario.UserName,
                 Roles = usuario.Roles,
-                ProveedorId = usuario.ProveedorId       
+               
                 
             };
             return token;

@@ -14,6 +14,8 @@ namespace Egresados.Data
 
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Pais> Pais { get; set; }
+        public virtual DbSet<Provincia> Provincia { get; set; }
        
 
     }

@@ -19,6 +19,59 @@ namespace Egresados.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("Egresados.Model.Entities.Pais", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo")
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pais");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo")
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<int?>("PaisId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PaisId");
+
+                    b.ToTable("Provincia");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -246,12 +299,18 @@ namespace Egresados.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProveedorId")
-                        .HasColumnType("int");
-
                     b.ToTable("AspNetUsers");
 
                     b.HasDiscriminator().HasValue("Usuario");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
+                {
+                    b.HasOne("Egresados.Model.Entities.Pais", "Pais")
+                        .WithMany("Provincia")
+                        .HasForeignKey("PaisId");
+
+                    b.Navigation("Pais");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -303,6 +362,11 @@ namespace Egresados.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Pais", b =>
+                {
+                    b.Navigation("Provincia");
                 });
 #pragma warning restore 612, 618
         }

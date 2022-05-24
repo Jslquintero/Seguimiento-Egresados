@@ -12,7 +12,9 @@ namespace Egresados.Api.Utils
     {
         public AutoMapping()
         {
-            
+            CreateMap<Perfil, PerfilViewModel>().ReverseMap();
+            CreateMap<Evento, EventoViewModel>().ReverseMap();
+            CreateMap<BolsaTrabajo, BolsaTrabajoViewModel>().ReverseMap();
 
         }
 

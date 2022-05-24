@@ -18,8 +18,4 @@
     <ProjectReference Include="..\Egresados.Model\Egresados.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

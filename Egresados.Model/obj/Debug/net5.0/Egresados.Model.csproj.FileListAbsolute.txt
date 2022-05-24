@@ -14,7 +14,6 @@ D:\Repositorios SSD\egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.d
 D:\Repositorios SSD\egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.dll
 D:\Repositorios SSD\egresados\Egresados.Model\bin\Debug\net5.0\ref\Egresados.Model.dll
 D:\Repositorios SSD\egresados\Egresados.Model\bin\Debug\net5.0\Egresados.Model.pdb
-D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.csproj.AssemblyReference.cache
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.GeneratedMSBuildEditorConfig.editorconfig
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.AssemblyInfoInputs.cache
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.AssemblyInfo.cs
@@ -22,3 +21,4 @@ D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.c
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.dll
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\ref\Egresados.Model.dll
 D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.pdb
+D:\Repositorios SSD\egresados\Egresados.Model\obj\Debug\net5.0\Egresados.Model.csproj.AssemblyReference.cache
