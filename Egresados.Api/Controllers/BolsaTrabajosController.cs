@@ -41,7 +41,7 @@ namespace Egresados.Api.Controllers
         [HttpGet("getList")]
         public async Task<ActionResult<List<BolsaTrabajo>>> GetList()
         {
-            var result = await _bolsaTrabajoServices.GetListAsync();
+            var result = await _bolsaTrabajoServices.GetListAsync(a=> !a.FechaBaja.HasValue);
             return result;
         }
 
@@ -52,7 +52,7 @@ namespace Egresados.Api.Controllers
         [HttpGet("getOne/{id}")]
         public async Task<ActionResult<BolsaTrabajo>> GetOne(int? id)
         {
-            var result = await _bolsaTrabajoServices.GetOneAync(a => a.Id == id);
+            var result = await _bolsaTrabajoServices.GetOneAync(a => a.Id == id && !a.FechaBaja.HasValue);
             return result;
         }
 

@@ -39,6 +39,7 @@ namespace Egresados.Services
         public async Task<BolsaTrabajo> Delete(int id)
         {
             var entidad = await GetOneAync(a => a.Id == id);
+            entidad.FechaBaja = DateTime.Now;
             await DeleteAsync(entidad);
             return entidad;
         }

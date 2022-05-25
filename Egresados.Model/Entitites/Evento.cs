@@ -18,6 +18,7 @@ namespace Egresados.Model.Entities
         public int Id { get; set; }
 
         public DateTime? FechaAlta { get; set; }
+        public DateTime? FechaBaja { get; set; }
         public DateTime? FechaModificacion { get; set; }
         public DateTime? FechaEvento { get; set; }
         public DateTime? HoraEvento { get; set; }
@@ -31,18 +32,36 @@ namespace Egresados.Model.Entities
         [Column(TypeName = "nvarchar(250)")]
         public string Descripcion { get; set; }
 
-        public int? LugarId { get; set; }
+        public int? LugarEventoId { get; set; }
         public int? FacultadId { get; set; }
 
         #endregion
 
         #region Calculados
 
+        [NotMapped]
+
+        public string FechaString
+        {
+            get
+            {
+                return FechaEvento.Value.ToShortDateString();
+            }
+        }
+
+        public string HoraString
+        {
+            get
+            {
+                return HoraEvento.Value.ToString("hh:mm tt");
+            }
+        }
+
         #endregion
 
         #region Relaciones
-        public ICollection<LugarEvento> LugarEvento { get; set; }
-        public ICollection<Facultad> Facultad { get; set; }
+        public LugarEvento LugarEvento { get; set; }
+        public Facultad Facultad { get; set; }
         #endregion
     }
 }

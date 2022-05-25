@@ -16,7 +16,7 @@ namespace Egresados.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class EventosController : ControllerBase
     {
         private readonly ILogger<EventosController> _logger;
@@ -41,7 +41,8 @@ namespace Egresados.Api.Controllers
         [HttpGet("getList")]
         public async Task<ActionResult<List<Evento>>> GetList()
         {
-            var result = await _eventoServices.GetListAsync();
+            string[] _include = { nameof(Evento.LugarEvento), nameof(Facultad)};
+            var result = await _eventoServices.GetListAsync(a=> !a.FechaBaja.HasValue, _include);
             return result;
         }
 
@@ -52,7 +53,8 @@ namespace Egresados.Api.Controllers
         [HttpGet("getOne/{id}")]
         public async Task<ActionResult<Evento>> GetOne(int? id)
         {
-            var result = await _eventoServices.GetOneAync(a => a.Id == id);
+            string[] _include = { nameof(Evento.LugarEvento), nameof(Facultad) };
+            var result = await _eventoServices.GetOneAync(a => a.Id == id && !a.FechaBaja.HasValue, _include);
             return result;
         }
 

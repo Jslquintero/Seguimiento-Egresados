@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Egresados.Data.Migrations
 {
-    public partial class @int : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,6 +57,7 @@ namespace Egresados.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaBaja = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Empresa = table.Column<string>(type: "nvarchar(250)", nullable: true),
                     VacanteNombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
@@ -79,8 +80,7 @@ namespace Egresados.Data.Migrations
                     FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
-                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
-                    FacultadId = table.Column<int>(type: "int", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -88,25 +88,19 @@ namespace Egresados.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Evento",
+                name: "LugarEvento",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    FechaEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    HoraEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
-                    Sala = table.Column<string>(type: "nvarchar(250)", nullable: true),
-                    Costo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(250)", nullable: true),
-                    LugarId = table.Column<int>(type: "int", nullable: true),
-                    FacultadId = table.Column<int>(type: "int", nullable: true)
+                    Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Evento", x => x.Id);
+                    table.PrimaryKey("PK_LugarEvento", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -242,8 +236,7 @@ namespace Egresados.Data.Migrations
                     Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
                     Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
                     CentroId = table.Column<int>(type: "int", nullable: true),
-                    CentroEducativoId = table.Column<int>(type: "int", nullable: true),
-                    EventoId = table.Column<int>(type: "int", nullable: true)
+                    CentroEducativoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -254,36 +247,84 @@ namespace Egresados.Data.Migrations
                         principalTable: "CentroEducativo",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Facultad_Evento_EventoId",
-                        column: x => x.EventoId,
-                        principalTable: "Evento",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "LugarEvento",
+                name: "Evento",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaBaja = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    FechaEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    HoraEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
-                    EventoId = table.Column<int>(type: "int", nullable: true)
+                    Sala = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Costo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    LugarEventoId = table.Column<int>(type: "int", nullable: true),
+                    FacultadId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_LugarEvento", x => x.Id);
+                    table.PrimaryKey("PK_Evento", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_LugarEvento_Evento_EventoId",
-                        column: x => x.EventoId,
-                        principalTable: "Evento",
+                        name: "FK_Evento_Facultad_FacultadId",
+                        column: x => x.FacultadId,
+                        principalTable: "Facultad",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Evento_LugarEvento_LugarEventoId",
+                        column: x => x.LugarEventoId,
+                        principalTable: "LugarEvento",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "CentroEducativo",
+                columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
+                values: new object[] { 1, "CRA", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(5048), null, "Centro Regional de Azuero" });
+
+            migrationBuilder.InsertData(
+                table: "Facultad",
+                columns: new[] { "Id", "CentroEducativoId", "CentroId", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
+                values: new object[,]
+                {
+                    { 1, null, 1, "FISC", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(2723), null, "Sistemas" },
+                    { 2, null, 1, "FIC", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(3465), null, "Civil" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "LugarEvento",
+                columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
+                values: new object[,]
+                {
+                    { 1, "HTAzuero", new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6450), null, "Hotel Azuero" },
+                    { 2, "CRA", new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6854), null, "UTP Azuero" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Provincia",
+                columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
+                values: new object[,]
+                {
+                    { 1, "06", new DateTime(2022, 5, 25, 5, 40, 29, 679, DateTimeKind.Local).AddTicks(4284), null, "Herrera" },
+                    { 2, "07", new DateTime(2022, 5, 25, 5, 40, 29, 680, DateTimeKind.Local).AddTicks(4607), null, "Los Santos" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Evento",
+                columns: new[] { "Id", "Costo", "Descripcion", "FacultadId", "FechaAlta", "FechaBaja", "FechaEvento", "FechaModificacion", "HoraEvento", "LugarEventoId", "Nombre", "Sala" },
+                values: new object[] { 1, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9751), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(120), null, new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9372), 1, "Evento 1", "1" });
+
+            migrationBuilder.InsertData(
+                table: "Evento",
+                columns: new[] { "Id", "Costo", "Descripcion", "FacultadId", "FechaAlta", "FechaBaja", "FechaEvento", "FechaModificacion", "HoraEvento", "LugarEventoId", "Nombre", "Sala" },
+                values: new object[] { 2, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1178), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1180), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1173), 1, "Evento 2", "2" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -325,19 +366,19 @@ namespace Egresados.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Evento_FacultadId",
+                table: "Evento",
+                column: "FacultadId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Evento_LugarEventoId",
+                table: "Evento",
+                column: "LugarEventoId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Facultad_CentroEducativoId",
                 table: "Facultad",
                 column: "CentroEducativoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Facultad_EventoId",
-                table: "Facultad",
-                column: "EventoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_LugarEvento_EventoId",
-                table: "LugarEvento",
-                column: "EventoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -361,10 +402,7 @@ namespace Egresados.Data.Migrations
                 name: "BolsaTrabajo");
 
             migrationBuilder.DropTable(
-                name: "Facultad");
-
-            migrationBuilder.DropTable(
-                name: "LugarEvento");
+                name: "Evento");
 
             migrationBuilder.DropTable(
                 name: "Provincia");
@@ -376,10 +414,13 @@ namespace Egresados.Data.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "CentroEducativo");
+                name: "Facultad");
 
             migrationBuilder.DropTable(
-                name: "Evento");
+                name: "LugarEvento");
+
+            migrationBuilder.DropTable(
+                name: "CentroEducativo");
         }
     }
 }

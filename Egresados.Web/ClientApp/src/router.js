@@ -49,6 +49,38 @@ export default new Router({
         },
       ],
     },
+    {
+      path: '/eventos',
+      component: () => import('@/views/dashboard/Index'),
+      children: [
+        {
+          name: 'Listar',
+          path: 'Listar',
+          component: () => import('@/views/eventos/Listar'),
+        },
+        {
+          name: 'CrearEvento',
+          path: 'CrearEditar',
+          component: () => import('@/views/eventos/CrearEditar'),
+        },
+      ],
+    },
+    {
+      path: '/bolsaTrabajos',
+      component: () => import('@/views/dashboard/Index'),
+      children: [
+        {
+          name: 'Listar',
+          path: 'Listar',
+          component: () => import('@/views/bolsaTrabajos/Listar'),
+        },
+        {
+          name: 'CrearTrabajo',
+          path: 'CrearEditar',
+          component: () => import('@/views/bolsaTrabajos/CrearEditar'),
+        },
+      ],
+    },
     //  dashboard routes start
     {
       path: '/dashboard',

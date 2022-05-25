@@ -209,8 +209,8 @@
 
     <v-card-text>
       <v-row>
-          <v-col>
-              <!-- <v-btn
+        <v-col>
+          <!-- <v-btn
       x-large
       color="#008C95"
       rounded
@@ -219,7 +219,7 @@
     >
       Agregar Usuario
     </v-btn> -->
-          </v-col>
+        </v-col>
         <v-col />
       </v-row>
     </v-card-text>

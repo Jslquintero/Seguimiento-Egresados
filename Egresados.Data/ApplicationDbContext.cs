@@ -47,18 +47,30 @@ namespace Egresados.Data
 
             builder.Entity<LugarEvento>()
           .HasData(
-               new LugarEvento() { Id = 1, Nombre = "Hotel Azuero", Codigo = "HTAzuero", FechaAlta = DateTime.Now }
-
+               new LugarEvento() { Id = 1, Nombre = "Hotel Azuero", Codigo = "HTAzuero", FechaAlta = DateTime.Now },
+               new LugarEvento() { Id = 2, Nombre = "UTP Azuero", Codigo = "CRA", FechaAlta = DateTime.Now }
 
                );
+
+            builder.Entity<Evento>()
+        .HasData(
+             new Evento() { Id = 1, Nombre = "Evento 1",Sala="1", Costo=10.4M,Descripcion="evento de prueba", HoraEvento=DateTime.Now,FechaAlta=DateTime.Now, FechaEvento=DateTime.Now,
+             LugarEventoId=1, FacultadId=1},
+             new Evento() { Id = 2, Nombre = "Evento 2",Sala="2", Costo=10.4M,Descripcion="evento de prueba", HoraEvento=DateTime.Now,FechaAlta=DateTime.Now, FechaEvento=DateTime.Now,
+             LugarEventoId=1, FacultadId=1}
+
+
+             );
+
             builder.Entity<Facultad>()
          .HasData(
-           new CentroEducativo() { Id = 1, Nombre = "Sistemas", Codigo = "FISC", FechaAlta = DateTime.Now }
+           new Facultad() { Id = 1, Nombre = "Sistemas", Codigo = "FISC", FechaAlta = DateTime.Now, CentroId=1 },
+           new Facultad() { Id = 2, Nombre = "Civil", Codigo = "FIC", FechaAlta = DateTime.Now, CentroId=1 }
            );
 
             builder.Entity<CentroEducativo>()
           .HasData(
-               new CentroEducativo() { Id = 1, Nombre = "Centro Regional de Azuero", Codigo = "CRA", FechaAlta = DateTime.Now, FacultadId = 1 }
+               new CentroEducativo() { Id = 1, Nombre = "Centro Regional de Azuero", Codigo = "CRA", FechaAlta = DateTime.Now }
                );
 
 

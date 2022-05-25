@@ -13,21 +13,21 @@ namespace Egresados.Model.Entities
         public int Id { get; set; }
 
         public DateTime? FechaAlta { get; set; }
+        public DateTime? FechaBaja { get; set; }
         public DateTime? FechaModificacion { get; set; }
         public DateTime? FechaEvento { get; set; }
         public DateTime? HoraEvento { get; set; }
 
-       
         public string Nombre { get; set; }
        
         public string Sala { get; set; }
-     
+      
         public Decimal Costo { get; set; }
        
         public string Descripcion { get; set; }
 
-        public int LugarId { get; set; }
-        public int FacultadId { get; set; }
+        public int? LugarEventoId { get; set; }
+        public int? FacultadId { get; set; }
         #endregion
 
         #region Calculados

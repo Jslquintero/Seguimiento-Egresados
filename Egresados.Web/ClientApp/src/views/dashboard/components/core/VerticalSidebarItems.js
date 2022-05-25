@@ -7,22 +7,95 @@ export default [
         title: 'Usuarios',
         class: 'two-column',
         to: '/usuarios',
-        autorizeRoles: 'Administrativo',
+        autorizeRoles: 'Administrador',
         children: [
             {
                 icon: 'mdi-account',
                 title: 'Listado de Usuarios',
                 to: 'listar',
-                autorizeRoles: 'Administrativo',
+                autorizeRoles: 'Administrador',
             },
             {
                 icon: 'mdi-account-box-multiple',
                 title: 'Usuarios en espera',
                 to: 'listaEspera',
-                autorizeRoles: 'Administrativo',
+                autorizeRoles: 'Administrador',
             },
         ],
     },
+
+    {
+        group: '/eventos',
+        model: false,
+        icon: 'mdi-account',
+        title: 'Eventos',
+        class: 'two-column',
+        to: '/eventos',
+        autorizeRoles: 'RecursoHumano',
+        children: [
+            {
+                icon: 'mdi-account',
+                title: 'Crear',
+                to: 'crearEditar',
+                autorizeRoles: 'RecursoHumano',
+            },
+            {
+                icon: 'mdi-account-box-multiple',
+                title: 'Lista de Eventos',
+                to: 'listar',
+                autorizeRoles: 'RecursoHumano',
+            },
+        ],
+    },
+
+    {
+        group: '/bolsaTrabajos',
+        model: false,
+        icon: 'mdi-account',
+        title: 'Bolsa de trabajos',
+        class: 'two-column',
+        to: '/bolsaTrabajos',
+        autorizeRoles: 'Empresa',
+        children: [
+            {
+                icon: 'mdi-account',
+                title: 'Crear',
+                to: 'crearEditar',
+                autorizeRoles: 'Empresa',
+            },
+            {
+                icon: 'mdi-account-box-multiple',
+                title: 'Lista de Eventos',
+                to: 'listar',
+                autorizeRoles: 'Empresa',
+            },
+        ],
+    },
+
+    // { header: 'Egresado' },
+    // {
+    //    group: '/usuarios',
+    //    model: false,
+    //    icon: 'mdi-account',
+    //    title: 'Usuarios',
+    //    class: 'two-column',
+    //    to: '/usuarios',
+    //    autorizeRoles: 'Egresado',
+    //    children: [
+    //        {
+    //            icon: 'mdi-account',
+    //            title: 'Listado de Usuarios',
+    //            to: 'listar',
+    //            autorizeRoles: 'Egresado',
+    //        },
+    //        {
+    //            icon: 'mdi-account-box-multiple',
+    //            title: 'Usuarios en espera',
+    //            to: 'listaEspera',
+    //            autorizeRoles: 'Egresado',
+    //        },
+    //    ],
+    // },
     {
         title: 'Tablas',
         icon: 'mdi-clipboard-outline',

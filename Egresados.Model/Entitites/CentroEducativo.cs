@@ -25,7 +25,6 @@ namespace Egresados.Model.Entities
 
         [Column(TypeName = "nvarchar(250)")]
         public string Nombre { get; set; }
-        public int? FacultadId { get; set; }
         #endregion
 
         #region Calculados
@@ -33,7 +32,7 @@ namespace Egresados.Model.Entities
         #endregion
 
         #region Relaciones
-        public ICollection<Facultad> Facultad { get; set; }
+       
         #endregion
     }
 }

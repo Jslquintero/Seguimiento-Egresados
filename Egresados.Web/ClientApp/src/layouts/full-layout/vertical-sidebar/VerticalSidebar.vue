@@ -87,7 +87,6 @@
   import { mapState } from 'vuex'
   import VerticalSidebarItems from './VerticalSidebarItems'
   import UsuarioServices from '../../../services/UsuarioServices'
-  import ProveedorServices from '../../../services/ProveedorServices'
 
   export default {
     name: 'VerticalSidebar',
@@ -103,7 +102,6 @@
     }),
     created () {
       this.usuarioServices = new UsuarioServices()
-      this.proveedorServices = new ProveedorServices()
     },
     computed: {
       ...mapState(['SidebarColor', 'SidebarBg']),

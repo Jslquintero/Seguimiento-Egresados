@@ -18,6 +18,7 @@ namespace Egresados.Model.Entities
         public int Id { get; set; }
 
         public DateTime? FechaAlta { get; set; }
+        public DateTime? FechaBaja { get; set; }
         public DateTime? FechaModificacion { get; set; }
 
         [Column(TypeName = "nvarchar(250)")]

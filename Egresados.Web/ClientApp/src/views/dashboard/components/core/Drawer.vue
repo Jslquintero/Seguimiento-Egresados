@@ -147,11 +147,17 @@
           ''
 
         usuario.roles.forEach((element) => {
-          if (element === 'Administrativo') {
-            this.visibilidadAdministrativo = true
-          }
           if (element === 'Administrador') {
             this.visibilidadAdministrativo = true
+          }
+          if (element === 'Egresado') {
+            this.visibilidadEgresado = true
+          }
+          if (element === 'RecursoHumano') {
+            this.visibilidadRecursoHumano = true
+          }
+          if (element === 'Empresa') {
+            this.visibilidadEmpresa = true
           }
         })
       },
@@ -162,18 +168,60 @@
         VerticalSidebarItems.forEach((element) => {
           if (
             this.visibilidadAdministrativo === true &&
-            (element.autorizeRoles === 'Administrativo' || element.autorizeRoles === '')
+            (element.autorizeRoles === 'Administrador')
           ) {
             // verificamos submenu
-            let i = 0
             element.children.forEach((subElement) => {
               if (
                 this.visibilidadAdministrativo === true &&
                 subElement.autorizeRoles === 'Administrador'
               ) {
-                element.children.splice(i, 1)
               }
-              i++
+            })
+            list.push(element)
+          }
+
+          if (
+            this.visibilidadEgresado === true &&
+            (element.autorizeRoles === 'Egresado' || element.autorizeRoles === '')
+          ) {
+            // verificamos submenu
+            element.children.forEach((subElement) => {
+              if (
+                this.visibilidadEgresado === true &&
+                subElement.autorizeRoles === 'Egresado'
+              ) {
+              }
+            })
+            list.push(element)
+          }
+
+          if (
+            this.visibilidadRecursoHumano === true &&
+            (element.autorizeRoles === 'RecursoHumano' || element.autorizeRoles === '')
+          ) {
+            // verificamos submenu
+            element.children.forEach((subElement) => {
+              if (
+                this.visibilidadRecursoHumano === true &&
+                subElement.autorizeRoles === 'RecursoHumano'
+              ) {
+              }
+            })
+            list.push(element)
+          }
+
+          if (
+            this.visibilidadEmpresa === true &&
+            (element.autorizeRoles === 'Empresa' || element.autorizeRoles === '')
+          ) {
+            // verificamos submenu
+            element.children.forEach((subElement) => {
+              if (
+                this.visibilidadEmpresa === true &&
+                subElement.autorizeRoles === 'Empresa'
+              ) {
+              }
             })
             list.push(element)
           }

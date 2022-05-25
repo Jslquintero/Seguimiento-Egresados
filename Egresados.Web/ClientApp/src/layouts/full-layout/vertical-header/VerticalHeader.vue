@@ -231,7 +231,6 @@
 // Utilities
   import { mapState, mapMutations } from 'vuex'
   import UsuarioServices from '../../../services/UsuarioServices'
-  import NotificacionServices from '../../../services/NotificacionServices'
 
   export default {
     name: 'VerticalHeader',
@@ -261,8 +260,6 @@
     }),
     created () {
       this.usuarioServices = new UsuarioServices()
-      this.notificacionServices = new NotificacionServices()
-      this.getListNotifications()
     },
     computed: {
       ...mapState(['navbarColor', 'Sidebar_drawer']),
@@ -284,7 +281,7 @@
       },
 
       href (item) {
-        if (item.title == 'Logout') {
+        if (item.title === 'Logout') {
           this.abrirPopUpLogout()
         }
 
@@ -310,56 +307,6 @@
         })
       },
 
-      getListNotifications: function () {
-        setInterval(() => {
-          this.notificacionServices.getList()
-            .then(data => {
-              this.notifications = []
-              data.forEach(element => {
-                this.notificationCounter = Object.keys(data).length
-
-                this.notifications.push({
-                  id: element.id,
-                  title: element.proveedor.nombre,
-                  iconbg: 'info',
-                  icon: 'mdi-cog',
-                  desc: element.descripcion,
-                  date: element.fechaAltaString,
-                  time: element.horaAltaString,
-                  tipo: element.tipo,
-                  ordenCompraId: element.ordenCompraId,
-                })
-                this.notifications.reverse()
-              })
-            })
-            .catch(error => {
-              this.showError(error.response.data.title)
-              console.log(error.response.status)
-            })
-        }, 5000)
-      },
-
-      abrirNotificacion: function (item) {
-        debugger
-        this.notificacionServices.activar(item.id)
-          .then(data => {
-            if (data === '') {
-              console.log(data)
-              this.$router.push({
-                path: '/ordenCompras/proceso/' + item.ordenCompraId,
-                params: {
-                  id: item.ordenCompraId,
-                  tab: item.tipo,
-                },
-              })
-            }
-          })
-          .catch(error => {
-            this.showError(error.response.data.title)
-            console.log(error.response.status)
-          })
-      },
-
       abrirPopUpLogout: function () {
         this.dialogLogout = true
       },
@@ -380,30 +327,27 @@
   }
 </script>
 
-<style lang="scss">
-.v-application .theme--dark.white .theme--dark.v-btn.v-btn--icon {
-  color: $font-color !important;
-}
+<style lang="sass">
+.v-application .theme--dark.white .theme--dark.v-btn.v-btn--icon
+
 .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined),
-.v-sheet.v-card:not(.v-sheet--outlined) {
-  box-shadow: $box-shadow;
-}
-.v-btn--icon.v-size--default .v-icon {
-  width: 20px;
-  font-size: 20px;
-}
-.hidelogo {
-  display: none;
-}
-.searchinput {
-  position: absolute;
-  width: 100%;
-  margin: 0;
-  left: 0;
-  z-index: 10;
-  padding: 0 15px;
-}
-.descpart {
-  max-width: 220px;
-}
+.v-sheet.v-card:not(.v-sheet--outlined)
+
+.v-btn--icon.v-size--default .v-icon
+  width: 20px
+  font-size: 20px
+
+.hidelogo
+  display: none
+
+.searchinput
+  position: absolute
+  width: 100%
+  margin: 0
+  left: 0
+  z-index: 10
+  padding: 0 15px
+
+.descpart
+  max-width: 220px
 </style>
