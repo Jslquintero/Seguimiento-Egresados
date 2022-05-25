@@ -27,15 +27,16 @@ namespace Egresados.Model.Entities
         public string Linkedin { get; set; }
         public string Telefono { get; set; }
         #endregion
-
+        public int? ProvinciaId { get; set; }
+        public int? FacultadId { get; set; }
         #region Calculados
 
         #endregion
 
         #region Relaciones
         public ICollection<Usuario> Usuario { get; set; }
-        //public ICollection<Pais> Pais { get; set; }
-        //public ICollection<Facultad> Facultad { get; set; }
+        public ICollection<Provincia> Provincia { get; set; }
+        public ICollection<Facultad> Facultad { get; set; }
         #endregion
     }
 }

@@ -12,7 +12,6 @@ D:\Repositorios SSD\egresados\Egresados.Web\bin\Debug\net5.0\Microsoft.AspNetCor
 D:\Repositorios SSD\egresados\Egresados.Web\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
 D:\Repositorios SSD\egresados\Egresados.Web\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Repositorios SSD\egresados\Egresados.Web\bin\Debug\net5.0\VueCliMiddleware.dll
-D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.csproj.AssemblyReference.cache
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.GeneratedMSBuildEditorConfig.editorconfig
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.AssemblyInfoInputs.cache
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.AssemblyInfo.cs
@@ -28,3 +27,4 @@ D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.dll
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\ref\Egresados.Web.dll
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.pdb
 D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.genruntimeconfig.cache
+D:\Repositorios SSD\egresados\Egresados.Web\obj\Debug\net5.0\Egresados.Web.csproj.AssemblyReference.cache

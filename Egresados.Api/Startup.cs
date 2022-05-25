@@ -74,7 +74,7 @@ namespace Egresados.Api
             services.AddScoped<IEventoServices, EventoServices>();
             services.AddScoped<IFacultadServices, FacultadServices>();
             services.AddScoped<ILugarEventoServices, LugarEventoServices>();
-            services.AddScoped<IPaisServices, PaisServices>();
+            //services.AddScoped<IPaisServices, PaisServices>();
             services.AddScoped<IProvinciaServices, ProvinciaServices>();
 
 

@@ -41,10 +41,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "FirebaseAdmin": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"

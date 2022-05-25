@@ -127,14 +127,6 @@ D:\Repositorios SSD\egresados\Egresados.Api\obj\Debug\net5.0\Egresados.Api.Razor
 D:\Repositorios SSD\egresados\Egresados.Api\obj\Debug\net5.0\Egresados.Api.csproj.CopyComplete
 D:\Repositorios SSD\egresados\Egresados.Api\obj\Debug\net5.0\Egresados.Api.genruntimeconfig.cache
 D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\DnsClient.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\FirebaseAdmin.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Api.Gax.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Api.Gax.Rest.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Apis.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Apis.Auth.PlatformServices.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Apis.Auth.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Google.Apis.Core.dll
-D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\MongoDB.Bson.dll
 D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\MongoDB.Driver.dll
 D:\Repositorios SSD\egresados\Egresados.Api\bin\Debug\net5.0\MongoDB.Driver.Core.dll

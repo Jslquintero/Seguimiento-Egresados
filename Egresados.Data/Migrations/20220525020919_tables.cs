@@ -2,7 +2,7 @@
 
 namespace Egresados.Data.Migrations
 {
-    public partial class Actualizacion : Migration
+    public partial class tables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

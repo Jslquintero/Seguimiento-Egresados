@@ -24,7 +24,7 @@ namespace Egresados.Model.Entities
 
         [Column(TypeName = "nvarchar(250)")]
         public string Nombre { get; set; }
-        public int CentroId { get; set; }
+        public int? CentroId { get; set; }
         #endregion
 
         #region Calculados

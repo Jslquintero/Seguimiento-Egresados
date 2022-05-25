@@ -12,7 +12,7 @@ namespace Egresados.Model.Entities
     {
         public LugarEvento()
         {
-            
+
         }
         #region Propiedades
         public int Id { get; set; }
@@ -25,7 +25,7 @@ namespace Egresados.Model.Entities
 
         [Column(TypeName = "nvarchar(250)")]
         public string Nombre { get; set; }
-
+        public int? EventoId {get;set;}
         #endregion
 
         #region Calculados

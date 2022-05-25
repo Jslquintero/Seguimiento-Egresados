@@ -31,8 +31,8 @@ namespace Egresados.Model.Entities
         [Column(TypeName = "nvarchar(250)")]
         public string Descripcion { get; set; }
 
-        public int LugarId { get; set; }
-        public int FacultadId { get; set; }
+        public int? LugarId { get; set; }
+        public int? FacultadId { get; set; }
 
         #endregion
 

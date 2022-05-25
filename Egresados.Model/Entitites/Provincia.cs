@@ -26,7 +26,6 @@ namespace Egresados.Model.Entities
         public DateTime? FechaAlta { get; set; }
 
         public DateTime? FechaModificacion { get; set; }
-        public int PaisId { get; set; }
 
         #endregion
 
@@ -35,7 +34,7 @@ namespace Egresados.Model.Entities
         #endregion
 
         #region Relaciones
-        public Pais Pais { get; set; }
+       
         #endregion
     }
 }

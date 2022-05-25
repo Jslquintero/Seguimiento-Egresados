@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Egresados.Data.Migrations
 {
-    public partial class initial : Migration
+    public partial class @int : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,6 @@ namespace Egresados.Data.Migrations
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ProveedorId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -49,6 +48,81 @@ namespace Egresados.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BolsaTrabajo",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Empresa = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    VacanteNombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Perfil = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Observacion = table.Column<string>(type: "nvarchar(250)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BolsaTrabajo", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CentroEducativo",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    FacultadId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CentroEducativo", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Evento",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    HoraEvento = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Sala = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    Costo = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    LugarId = table.Column<int>(type: "int", nullable: true),
+                    FacultadId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Evento", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Provincia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Codigo = table.Column<string>(type: "nvarchar(10)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(150)", nullable: true),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Provincia", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -157,6 +231,60 @@ namespace Egresados.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Facultad",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    CentroId = table.Column<int>(type: "int", nullable: true),
+                    CentroEducativoId = table.Column<int>(type: "int", nullable: true),
+                    EventoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Facultad", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Facultad_CentroEducativo_CentroEducativoId",
+                        column: x => x.CentroEducativoId,
+                        principalTable: "CentroEducativo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Facultad_Evento_EventoId",
+                        column: x => x.EventoId,
+                        principalTable: "Evento",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LugarEvento",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FechaAlta = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FechaModificacion = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Codigo = table.Column<string>(type: "nvarchar(50)", nullable: true),
+                    Nombre = table.Column<string>(type: "nvarchar(250)", nullable: true),
+                    EventoId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LugarEvento", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LugarEvento_Evento_EventoId",
+                        column: x => x.EventoId,
+                        principalTable: "Evento",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -195,6 +323,21 @@ namespace Egresados.Data.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Facultad_CentroEducativoId",
+                table: "Facultad",
+                column: "CentroEducativoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Facultad_EventoId",
+                table: "Facultad",
+                column: "EventoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LugarEvento_EventoId",
+                table: "LugarEvento",
+                column: "EventoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -215,10 +358,28 @@ namespace Egresados.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "BolsaTrabajo");
+
+            migrationBuilder.DropTable(
+                name: "Facultad");
+
+            migrationBuilder.DropTable(
+                name: "LugarEvento");
+
+            migrationBuilder.DropTable(
+                name: "Provincia");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "CentroEducativo");
+
+            migrationBuilder.DropTable(
+                name: "Evento");
         }
     }
 }

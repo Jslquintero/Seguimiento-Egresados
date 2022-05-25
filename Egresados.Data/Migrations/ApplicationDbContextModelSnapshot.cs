@@ -19,7 +19,43 @@ namespace Egresados.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Egresados.Model.Entities.Pais", b =>
+            modelBuilder.Entity("Egresados.Model.Entities.BolsaTrabajo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Empresa")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Observacion")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Perfil")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("VacanteNombre")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BolsaTrabajo");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.CentroEducativo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -27,7 +63,10 @@ namespace Egresados.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Codigo")
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("FacultadId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("FechaAlta")
                         .HasColumnType("datetime2");
@@ -36,11 +75,147 @@ namespace Egresados.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(150)");
+                        .HasColumnType("nvarchar(250)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pais");
+                    b.ToTable("CentroEducativo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Codigo = "CRA",
+                            FacultadId = 1,
+                            FechaAlta = new DateTime(2022, 5, 24, 21, 10, 11, 751, DateTimeKind.Local).AddTicks(3294),
+                            Nombre = "Centro Regional de Azuero"
+                        });
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Evento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("Costo")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<int?>("FacultadId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaEvento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("HoraEvento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("LugarId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("Sala")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Evento");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Facultad", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("CentroEducativoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CentroId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Codigo")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("EventoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CentroEducativoId");
+
+                    b.HasIndex("EventoId");
+
+                    b.ToTable("Facultad");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Codigo = "FISC",
+                            FechaAlta = new DateTime(2022, 5, 24, 21, 10, 11, 751, DateTimeKind.Local).AddTicks(2349),
+                            Nombre = "Sistemas"
+                        });
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.LugarEvento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("EventoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventoId");
+
+                    b.ToTable("LugarEvento");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Codigo = "HTAzuero",
+                            FechaAlta = new DateTime(2022, 5, 24, 21, 10, 11, 751, DateTimeKind.Local).AddTicks(491),
+                            Nombre = "Hotel Azuero"
+                        });
                 });
 
             modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
@@ -62,14 +237,25 @@ namespace Egresados.Data.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(150)");
 
-                    b.Property<int?>("PaisId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("PaisId");
-
                     b.ToTable("Provincia");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Codigo = "06",
+                            FechaAlta = new DateTime(2022, 5, 24, 21, 10, 11, 749, DateTimeKind.Local).AddTicks(501),
+                            Nombre = "Herrera"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Codigo = "07",
+                            FechaAlta = new DateTime(2022, 5, 24, 21, 10, 11, 749, DateTimeKind.Local).AddTicks(9553),
+                            Nombre = "Los Santos"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -304,13 +490,26 @@ namespace Egresados.Data.Migrations
                     b.HasDiscriminator().HasValue("Usuario");
                 });
 
-            modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
+            modelBuilder.Entity("Egresados.Model.Entities.Facultad", b =>
                 {
-                    b.HasOne("Egresados.Model.Entities.Pais", "Pais")
-                        .WithMany("Provincia")
-                        .HasForeignKey("PaisId");
+                    b.HasOne("Egresados.Model.Entities.CentroEducativo", "CentroEducativo")
+                        .WithMany("Facultad")
+                        .HasForeignKey("CentroEducativoId");
 
-                    b.Navigation("Pais");
+                    b.HasOne("Egresados.Model.Entities.Evento", null)
+                        .WithMany("Facultad")
+                        .HasForeignKey("EventoId");
+
+                    b.Navigation("CentroEducativo");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.LugarEvento", b =>
+                {
+                    b.HasOne("Egresados.Model.Entities.Evento", "Evento")
+                        .WithMany("LugarEvento")
+                        .HasForeignKey("EventoId");
+
+                    b.Navigation("Evento");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -364,9 +563,16 @@ namespace Egresados.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Egresados.Model.Entities.Pais", b =>
+            modelBuilder.Entity("Egresados.Model.Entities.CentroEducativo", b =>
                 {
-                    b.Navigation("Provincia");
+                    b.Navigation("Facultad");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Evento", b =>
+                {
+                    b.Navigation("Facultad");
+
+                    b.Navigation("LugarEvento");
                 });
 #pragma warning restore 612, 618
         }
