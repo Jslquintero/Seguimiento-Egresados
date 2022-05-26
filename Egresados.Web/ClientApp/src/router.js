@@ -42,11 +42,6 @@ export default new Router({
           path: 'Listar',
           component: () => import('@/views/usuarios/Listar'),
         },
-        {
-          name: 'Lista de Usuarios en espera',
-          path: 'ListaEspera',
-          component: () => import('@/views/usuarios/ListaEspera'),
-        },
       ],
     },
     {
@@ -81,6 +76,27 @@ export default new Router({
         },
       ],
     },
+    {
+      path: '/egresados',
+      component: () => import('@/views/dashboard/Index'),
+      children: [
+        {
+          name: 'Listar',
+          path: 'ListarEvento',
+          component: () => import('@/views/egresados/ListarEvento'),
+        },
+        {
+          name: 'perfil',
+          path: 'Perfil',
+          component: () => import('@/views/egresados/Perfil'),
+        },
+        {
+          name: 'Editar',
+          path: 'CrearEditar',
+          component: () => import('@/views/egresados/CrearEditar'),
+        },
+      ],
+    },
     //  dashboard routes start
     {
       path: '/dashboard',
@@ -88,7 +104,7 @@ export default new Router({
       children: [
         // Dashboard
         {
-          name: 'Dashboard',
+          name: 'Inicio',
           path: '',
           component: () => import('@/views/dashboard/Dashboard'),
         },

@@ -48,30 +48,23 @@ export default [
         ],
     },
 
-    // { header: 'Egresado' },
-    // {
-    //    group: '/usuarios',
-    //    model: false,
-    //    icon: 'mdi-account',
-    //    title: 'Usuarios',
-    //    class: 'two-column',
-    //    to: '/usuarios',
-    //    autorizeRoles: 'Egresado',
-    //    children: [
-    //        {
-    //            icon: 'mdi-account',
-    //            title: 'Listado de Usuarios',
-    //            to: 'listar',
-    //            autorizeRoles: 'Egresado',
-    //        },
-    //        {
-    //            icon: 'mdi-account-box-multiple',
-    //            title: 'Usuarios en espera',
-    //            to: 'listaEspera',
-    //            autorizeRoles: 'Egresado',
-    //        },
-    //    ],
-    // },
+    {
+        group: '/egresados',
+        model: false,
+        icon: 'mdi-account',
+        title: 'Explorar',
+        class: 'two-column',
+        to: '/egresados',
+        autorizeRoles: 'Egresado',
+        children: [
+            {
+                icon: 'mdi-account-box-multiple',
+                title: 'Listado de Eventos',
+                to: 'listar',
+                autorizeRoles: 'Egresado',
+            },
+        ],
+     },
     {
         title: 'Tablas',
         icon: 'mdi-clipboard-outline',

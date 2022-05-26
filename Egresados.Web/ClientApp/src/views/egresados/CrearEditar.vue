@@ -22,40 +22,58 @@
               required
             />
             <v-text-field
-              v-model="form.descripcion"
-              label="Descripción"
+              v-model="form.telefono"
+              label="Teléfono"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
             <v-text-field
-              v-model="form.fechaEvento"
+              v-model="form.empresa"
+              label="Empresa o Institución donde labora"
+              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              required
+            />
+            <v-text-field
+              v-model="form.biografia"
+              label="Biografía"
+              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              required
+            />
+            <v-text-field
+              v-model="form.fechaNacimiento"
               label="Fecha del evento"
               type="date"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
-            <v-col />
-            <v-col />
             <v-text-field
-              v-model="form.horaEvento"
-              label="Hora del evento"
-              type="time"
+              v-model="form.linkedin"
+              label="Linkedin"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
-              required
+            />
+            <v-text-field
+              v-model="form.instagram"
+              label="Instagram"
+              :rules="[(v) => !!v || 'Este campo es requiredo']"
             />
             <v-col />
-            <v-text-field
-              v-model="form.costo"
-              label="Costo"
-              type="number"
-              :rules="[(v) => !!v || 'Este campo es requiredo']"
-              required
-            />
+            <v-col />
+            <v-col />
             <v-col />
             <v-select
-              v-model="form.lugarEventoId"
-              label="Lugar"
-              :items="lugarEventos"
+              v-model="form.genero"
+              label="Género"
+              :items="generos"
+              item-text="nombre"
+              item-value="id"
+              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              persistent-hint
+              single-line
+            />
+            <v-select
+              v-model="form.provinciaId"
+              label="Provincia"
+              :items="provincias"
               item-text="nombre"
               item-value="id"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
@@ -108,9 +126,9 @@
 
 <script>
   import moment from 'moment'
-  import EventoServices from '../../services/EventoServices'
-  import LugarEventoServices from '../../services/LugarEventoServices'
+  import ProvinciaServices from '../../services/ProvinciaServices'
   import FacultadServices from '../../services/FacultadServices'
+  import PerfilServices from '../../services/PerfilServices'
 
   export default {
     name: 'CrearEditar',
@@ -119,33 +137,41 @@
         form: {
           fechaAlta: '',
           fechaModificacion: '',
-          id: 0,
-          lugarEvento: '',
-          lugarEventoId: '',
+          id: '',
+          usuarioId: '',
           facultad: '',
           facultadId: '',
+          provincia: '',
+          provoinciaId: '',
+          genero: '',
           nombre: '',
-          descripcion: '',
-          fechaEvento: '',
-          horaEvento: '',
-          sala: '',
-          costo: '',
+          telefono: '',
+          biografia: '',
+          fechaNacimiento: '',
+          empresa: '',
+          linkedin: '',
+          instagram: '',
         },
-        lugarEventos: [],
+        provincias: [],
         facultades: [],
+        usuarios: [],
+        generos: [
+          { text: 'M', value: 'M' },
+          { text: 'F', value: 'F' },
+          { text: 'Otro', value: 'O' },
+        ],
       }
     },
     created () {
-      this.eventoServices = new EventoServices()
-      this.lugarEventoServices = new LugarEventoServices()
       this.facultadServices = new FacultadServices()
+      this.provinciaServices = new ProvinciaServices()
+      this.perfilServices = new PerfilServices()
     },
     mounted () {
-      this.getOneEvento(this.$route.params.id)
-      this.selectListLugarEvento()
+      this.getOnePerfil(this.$route.params.id)
+      this.selectListProvincia()
       this.selectListFacultad()
-      this.form.fechaEvento = moment().format('YYYY-MM-DD')
-      this.form.horaEvento = moment().format('hh:mm')
+      this.form.fechaNacimiento = moment().format('YYYY-MM-DD')
     },
     methods: {
       showSuccess (message) {
@@ -166,11 +192,11 @@
         })
       },
 
-      selectListLugarEvento () {
-        this.lugarEventoServices
+      selectListProvincia () {
+        this.provinciaServices
           .selectList()
           .then((data) => {
-            this.lugarEventos = data
+            this.provincias = data
           })
           .catch((error) => {
             this.showError(error.response.data.title)
@@ -190,14 +216,18 @@
           })
       },
 
-      getOneEvento (id) {
-        if (id > 0) {
-          this.eventoServices
+      getUserStorage () {
+        this.usuario = JSON.parse(localStorage.getItem('access_user'))
+      },
+
+      getOnePerfil (id) {
+        if (id !== '') {
+          this.perfilServices
             .getOne(id)
             .then((data) => {
               this.form = data
-              this.form.fechaEvento = moment(this.form.fechaEvento).format('YYYY-MM-DD')
-              this.form.horaEvento = moment(this.form.horaEvento).format('hh:mm')
+              this.form.fechaNacimiento = moment(this.form.fechaEvento).format('YYYY-MM-DD')
+              this.form.usuarioId = this.usuario.id
             })
             .catch((error) => {
               this.showError(error.response.data.title)
@@ -209,13 +239,13 @@
       save () {
         this.$refs.form.validate()
         if (this.$refs.form.validate(true)) {
-          this.eventoServices
+          this.perfilServices
             .save(this.form)
             .then((data) => {
               if (data === '') {
-                this.showSuccess('El evento se creó correctamente.')
+                this.showSuccess('El perfil ha actualizado')
                 this.$router.push({
-                  path: '/eventos/Listar/',
+                  path: '/egresados/Perfil/',
                 })
               }
             })
@@ -227,7 +257,7 @@
 
       cancelar () {
         this.$router.push({
-          path: '/eventos/Listar',
+          path: '/egresados/Perfil',
         })
       },
     },

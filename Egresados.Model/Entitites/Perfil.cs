@@ -29,6 +29,7 @@ namespace Egresados.Model.Entities
         #endregion
         public int? ProvinciaId { get; set; }
         public int? FacultadId { get; set; }
+        public int? UsuarioId { get; set; }
         #region Calculados
 
         #endregion

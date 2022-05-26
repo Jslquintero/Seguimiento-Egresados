@@ -48,6 +48,18 @@ namespace Egresados.Api.Controllers
             return result;
         }
 
+        /// <summary>
+        /// Obtiene la informacion del objeto.
+        /// </summary>
+        /// <param name="id"></param> 
+        [HttpGet("getOne/{id}")]
+        public async Task<ActionResult<Perfil>> GetOne(string id)
+        { 
+            var result = await _perfilServices.GetOne(id);
+           
+            return result;
+        }
+
         // <summary>
         /// Crea o Edita un nuevo Objeto.
         /// </summary>

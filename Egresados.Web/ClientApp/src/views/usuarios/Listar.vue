@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="mx-3 my-auto"
+    class="mx-3 my-5"
   >
     <v-card-title>
       <v-row>
@@ -212,7 +212,7 @@
         <v-col>
           <v-btn
             x-large
-            color="#008C95"
+            color="#691a5c"
             rounded
             dark
             @click="addItem"

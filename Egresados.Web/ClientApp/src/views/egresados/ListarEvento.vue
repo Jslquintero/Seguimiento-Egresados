@@ -19,17 +19,6 @@
           md="9"
         />
       </v-row>
-      <v-col>
-        <v-btn
-          x-large
-          color="#691a5c"
-          rounded
-          dark
-          @click="addItem"
-        >
-          Crear nuevo evento
-        </v-btn>
-      </v-col>
       <v-col />
     </v-card-title>
 
@@ -40,17 +29,36 @@
     >
       <template v-slot:item.actions="{ item }">
         <v-icon
-          title="Editar"
+          color="yellow darken-2"
+          title="Interesado"
           class="mr-2"
-          @click="editItem(item)"
+          @click="assitencia(item)"
         >
-          mdi-pencil
+          mdi-star
         </v-icon>
         <v-icon
-          small
-          @click="deleteItem(item)"
+          color="green darken-2"
+          title="Asistiré"
+          class="mr-2"
+          @click="assitencia(item)"
         >
-          mdi-delete
+          mdi-check
+        </v-icon>
+        <v-icon
+          color="red darken-2"
+          title="No Interesado"
+          class="mr-2"
+          @click="assitencia(item)"
+        >
+          mdi-star-off
+        </v-icon>
+        <v-icon
+          color="blue darken-2"
+          title="Compartir"
+          class="mr-2"
+          @click="assitencia(item)"
+        >
+          mdi-share
         </v-icon>
       </template>
     </v-data-table>
@@ -124,25 +132,13 @@
           })
       },
 
-      addItem () {
-        this.$router.push({ name: 'CrearEvento', params: { id: 0 } })
-      },
-      editItem (item) {
-        this.$router.push({ name: 'CrearEvento', params: { id: item.id } })
-      },
-      deleteItem (item) {
-        this.eventoServices
-          .delete(item.id)
-          .then((data) => {
-            if (data === '') {
-              console.log(data)
-              this.showSuccess('Elemento eliminado correctamente.')
-            }
-          })
-          .catch((error) => {
-            this.showError(error.response.data.title)
-            console.log(error.response.status)
-          })
+      assitencia () {
+        this.$swal({
+          titleText: 'Correcto!',
+          text: 'Asistencia registrada',
+          icon: 'succes',
+          confirmButtonText: 'Aceptar',
+        })
       },
     },
   }

@@ -13,10 +13,12 @@
   >
     <template v-slot:img="props">
       <v-img
-        :gradient="`to bottom, ${barColor}`"
+        :gradient="`to bottom, #691a5c, #5C79C3, #E7E7E7`"
+        src="@/assets/images/logos/logo.png"
         v-bind="props"
       />
     </template>
+    <!-- separacion -->
     <v-list-item
       two-line
       class="profile-bg"
@@ -36,7 +38,6 @@
       </v-list-item-content>
     </v-list-item>
     <v-divider />
-
     <v-list
       expand
       nav
@@ -101,9 +102,11 @@
     data: () => ({
       items: [],
       usuario: {},
+      bar: '',
+      barColor: '',
     }),
     computed: {
-      ...mapState(['barColor', 'barImage']),
+      ...mapState([]),
       drawer: {
         get () {
           return this.$store.state.drawer
@@ -183,7 +186,7 @@
 
           if (
             this.visibilidadEgresado === true &&
-            (element.autorizeRoles === 'Egresado' || element.autorizeRoles === '')
+            (element.autorizeRoles === 'Egresado')
           ) {
             // verificamos submenu
             element.children.forEach((subElement) => {
@@ -198,7 +201,7 @@
 
           if (
             this.visibilidadRecursoHumano === true &&
-            (element.autorizeRoles === 'RecursoHumano' || element.autorizeRoles === '')
+            (element.autorizeRoles === 'RecursoHumano')
           ) {
             // verificamos submenu
             element.children.forEach((subElement) => {
@@ -213,7 +216,7 @@
 
           if (
             this.visibilidadEmpresa === true &&
-            (element.autorizeRoles === 'Empresa' || element.autorizeRoles === '')
+            (element.autorizeRoles === 'Empresa')
           ) {
             // verificamos submenu
             element.children.forEach((subElement) => {

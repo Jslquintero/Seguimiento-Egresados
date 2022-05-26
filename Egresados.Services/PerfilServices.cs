@@ -5,6 +5,7 @@ using Egresados.Services.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -30,10 +31,10 @@ namespace Egresados.Services
 
         public async Task<string> GenerarId(Perfil entidad)
         {
-            var random = new Random();
-            var bytes_array = new byte[32];
-            using (var crypto = new RNGCryptoServiceProvider()) crypto.GetBytes(bytes_array);
-            var alphanumeric_string = Convert.ToBase64String(bytes_array);
+            string path = Path.GetRandomFileName();
+            path = path.Replace(".", ""); // Remove period.
+            var alphanumeric_string =  path.Substring(0, 8);  // Return 8 character string
+            
             return alphanumeric_string;
           
         }
@@ -82,5 +83,11 @@ namespace Egresados.Services
             }
         }
 
+        public async Task<Perfil> GetOne(string id)
+        {
+            var list =  _perfiles.Find(a => a.Id == id).FirstOrDefault();
+            var result = list;
+            return result;
+        }
     }
 }

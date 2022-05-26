@@ -17,31 +17,31 @@ namespace Egresados.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class FacultadesController : ControllerBase
+    public class ProvinciasController : ControllerBase
     {
-        private readonly ILogger<FacultadesController> _logger;
+        private readonly ILogger<ProvinciasController> _logger;
         private readonly IMapper _mapper;
         private readonly UserManager<Usuario> _userManager;
-        private readonly IFacultadServices _facultadeServices;
+        private readonly IProvinciaServices _provinciaServices;
 
-        public FacultadesController(ILogger<FacultadesController> logger,
+        public ProvinciasController(ILogger<ProvinciasController> logger,
                                IMapper mapper,
                                UserManager<Usuario> userManager,
-                               IFacultadServices facultadeServices
+                               IProvinciaServices _provinciaServices
                           )
         {
             _logger = logger;
             _mapper = mapper;
-            _facultadeServices = facultadeServices;
+            _provinciaServices = _provinciaServices;
         }
 
         /// <summary>
         /// Obtiene listado para los select.
         /// </summary>     
         [HttpGet("selectList")]
-        public async Task<ActionResult<List<Facultad>>> SelectList()
+        public async Task<ActionResult<List<Provincia>>> SelectList()
         {
-            var result = await _facultadeServices.GetListAsync();
+            var result = await _provinciaServices.GetListAsync();
             return result;
         }
     }

@@ -75,7 +75,7 @@
                 <v-btn
                   :disabled="!valid"
                   rounded
-                  color="#F00095"
+                  color="#691a5c"
                   block
                   class="mr-4 white--text"
                   submit

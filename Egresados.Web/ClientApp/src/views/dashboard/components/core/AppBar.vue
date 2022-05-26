@@ -3,31 +3,25 @@
     id="app-bar"
     absolute
     app
-    color="transparent"
     flat
     height="75"
   >
-    <v-btn
-      class="mr-3"
-      elevation="1"
-      fab
-      small
-      @click="setDrawer(!drawer)"
-    >
-      <v-icon v-if="value">
-        mdi-view-quilt
-      </v-icon>
-
-      <v-icon v-else>
-        mdi-dots-horizontal
-      </v-icon>
-    </v-btn>
-
+    <v-toolbar-title class="hidden-sm-and-down font-weight-bold white--text">
+     <span class="logo-icon">
+          <img src="../../../../assets/images/logos/logo-light-icon.png" />
+        </span>
+      <span class="logo-text ml-2">
+        <img
+          src="../../../../assets/images/logos/logo-light-text.png"
+          class="mt-2"
+        >
+      </span>
+    </v-toolbar-title>
+     <v-spacer />
     <v-toolbar-title
-      class="hidden-sm-and-down font-weight-light"
+      class="hidden-sm-and-down font-weight-bold white--text"
       v-text="$route.name"
     />
-
     <v-spacer />
 
     <div class="mx-3" />
@@ -51,16 +45,14 @@
             color="red"
             dot
           >
-            <v-icon>mdi-message</v-icon>
+            <v-icon color="white">
+              mdi-bell
+            </v-icon>
           </v-badge>
         </v-btn>
       </template>
 
       <v-list>
-        <h4 class="px-5 py-3 pt-2 font-weight-medium text-h6">
-          Notificaciones
-        </h4>
-        <v-divider />
         <v-list-item
           v-for="(item, i) in notifications"
           :key="i"
@@ -117,8 +109,8 @@
         >
           <v-avatar size="40">
             <img
-              src="https://randomuser.me/api/portraits/men/81.jpg"
-              alt="John"
+              :src="`${usuario.url}`"
+              :alt="usuario.url"
             >
           </v-avatar>
         </v-btn>
@@ -161,10 +153,14 @@
     },
 
     data: () => ({
-      notifications: [{ title: 'My Contacts', to: '/' }],
-      userProfile: [{ title: 'Mi perfil', to: '/pages/user' }],
-      href () {
-        return undefined
+      notifications: [],
+      userProfile: [],
+      href: '',
+      usuario: {
+        url: '',
+      },
+      bar: {
+        background: '',
       },
     }),
 
@@ -174,33 +170,145 @@
     created () {
       this.usuarioServices = new UsuarioServices()
     },
+    mounted () {
+      this.GetUser()
+      this.PerfilNotificacionRol()
+    },
     methods: {
       ...mapMutations({
         setDrawer: 'SET_DRAWER',
       }),
       logout () {
-        this.usuarioServices.logout()
-          .then(data => {
-            this.$swal({
-              title: '¿Estás seguro?',
-              text: 'cerrando sesión',
-              icon: 'warning',
-              showCancelButton: true,
-              confirmButtonColor: '#3085d6',
-              cancelButtonColor: '#d33',
-              confirmButtonText: 'Si, cerrar sesión',
-            }).then((result) => {
-              if (result.isConfirmed) {
-                this.$swal(
-                  'Cerrando sesión',
-                  'sesión cerrada con éxito',
-                  'success',
-                )
-                this.$router.push('/')
-              }
-            })
+        this.usuarioServices.logout().then((data) => {
+          this.$swal({
+            title: '¿Estás seguro?',
+            text: 'cerrando sesión',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, cerrar sesión',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.$swal('Cerrando sesión', 'sesión cerrada con éxito', 'success')
+              this.$router.push('/')
+            }
           })
+        })
+      },
+
+      GetUser () {
+        const usuario = this.usuarioServices.getUser()
+
+        this.usuario = usuario
+        this.usuario.url =
+          'https://ui-avatars.com/api/?background=F00095&color=fff&name=' +
+          this.usuario.name +
+          this.usuario.lastName +
+          ''
+
+        usuario.roles.forEach((element) => {
+          if (element === 'Administrador') {
+            this.visibilidadAdministrativo = true
+          }
+          if (element === 'Egresado') {
+            this.visibilidadEgresado = true
+          }
+          if (element === 'RecursoHumano') {
+            this.visibilidadRecursoHumano = true
+          }
+          if (element === 'Empresa') {
+            this.visibilidadEmpresa = true
+          }
+        })
+      },
+
+      PerfilNotificacionRol () {
+        // Perfil segun rol
+        if (this.visibilidadAdministrativo) {
+          this.userProfile = []
+        }
+        if (this.visibilidadRecursoHumano) {
+          this.userProfile = []
+        }
+        if (this.visibilidadEmpresa) {
+          this.userProfile = []
+        }
+        if (this.visibilidadEgresado) {
+          this.userProfile.push({
+            title: 'Perfil',
+            to: '/egresados/perfil',
+          })
+        }
+        if (this.visibilidadAdministrativo) {
+          this.notifications.push({
+            title: 'Nuevo Usuario',
+            desc: 'Nuevo usuario registrado',
+            icon: 'mdi-bell',
+            iconbg: 'red',
+            time: 'Hace 30 min',
+          })
+        }
+        if (this.visibilidadRecursoHumano) {
+          this.notifications.push(
+            {
+              title: 'Asistencia',
+              desc: 'Alguien ha marcado su asistencia',
+              icon: 'mdi-bell',
+              iconbg: 'red',
+              time: 'Hace 1 min',
+            },
+            {
+              title: 'Asistencia',
+              desc: 'Alguien ha removido su asistencia',
+              icon: 'mdi-bell',
+              iconbg: 'red',
+              time: 'Hace 15 min',
+            },
+          )
+        }
+        if (this.visibilidadEmpresa) {
+          this.notifications.push(
+            {
+              title: 'Postulaciones',
+              desc: 'Alguien ha postulado a su oferta',
+              icon: 'mdi-bell',
+              iconbg: 'red',
+              time: 'Hace 30 min',
+            },
+            {
+              title: 'Postulaciones',
+              desc: 'Alguien ha removido su postulacion',
+              icon: 'mdi-bell',
+              iconbg: 'red',
+              time: 'Hace 1 min',
+            },
+          )
+        }
+        if (this.visibilidadEgresado) {
+          this.notifications.push(
+            {
+              title: 'Solicitud de amistad',
+              desc: 'Alguien quiere ser tu amigo',
+              icon: 'mdi-account',
+              iconbg: 'red',
+              time: 'Hace 1 min',
+            },
+            {
+              title: 'Evento',
+              desc: 'Alguien te ha invitado a un evento',
+              icon: 'mdi-bell',
+              iconbg: 'red',
+              time: 'Hace 15 min',
+            },
+          )
+        }
       },
     },
   }
 </script>
+<style lang="scss">
+#app-bar {
+  background: linear-gradient(90deg, #681d60 5%, #5c79c3 80%, #e7e7e7 100%);
+}
+</style>
