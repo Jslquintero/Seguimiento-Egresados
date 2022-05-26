@@ -287,15 +287,15 @@ namespace Egresados.Data.Migrations
             migrationBuilder.InsertData(
                 table: "CentroEducativo",
                 columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
-                values: new object[] { 1, "CRA", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(5048), null, "Centro Regional de Azuero" });
+                values: new object[] { 1, "CRA", new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(9802), null, "Centro Regional de Azuero" });
 
             migrationBuilder.InsertData(
                 table: "Facultad",
                 columns: new[] { "Id", "CentroEducativoId", "CentroId", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
                 values: new object[,]
                 {
-                    { 1, null, 1, "FISC", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(2723), null, "Sistemas" },
-                    { 2, null, 1, "FIC", new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(3465), null, "Civil" }
+                    { 1, null, 1, "FISC", new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(7665), null, "Sistemas" },
+                    { 2, null, 1, "FIC", new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(8366), null, "Civil" }
                 });
 
             migrationBuilder.InsertData(
@@ -303,8 +303,8 @@ namespace Egresados.Data.Migrations
                 columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
                 values: new object[,]
                 {
-                    { 1, "HTAzuero", new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6450), null, "Hotel Azuero" },
-                    { 2, "CRA", new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6854), null, "UTP Azuero" }
+                    { 1, "HTAzuero", new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(1837), null, "Hotel Azuero" },
+                    { 2, "CRA", new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(2245), null, "UTP Azuero" }
                 });
 
             migrationBuilder.InsertData(
@@ -312,19 +312,19 @@ namespace Egresados.Data.Migrations
                 columns: new[] { "Id", "Codigo", "FechaAlta", "FechaModificacion", "Nombre" },
                 values: new object[,]
                 {
-                    { 1, "06", new DateTime(2022, 5, 25, 5, 40, 29, 679, DateTimeKind.Local).AddTicks(4284), null, "Herrera" },
-                    { 2, "07", new DateTime(2022, 5, 25, 5, 40, 29, 680, DateTimeKind.Local).AddTicks(4607), null, "Los Santos" }
+                    { 1, "06", new DateTime(2022, 5, 26, 18, 6, 38, 399, DateTimeKind.Local).AddTicks(1565), null, "Herrera" },
+                    { 2, "07", new DateTime(2022, 5, 26, 18, 6, 38, 400, DateTimeKind.Local).AddTicks(1157), null, "Los Santos" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Evento",
                 columns: new[] { "Id", "Costo", "Descripcion", "FacultadId", "FechaAlta", "FechaBaja", "FechaEvento", "FechaModificacion", "HoraEvento", "LugarEventoId", "Nombre", "Sala" },
-                values: new object[] { 1, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9751), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(120), null, new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9372), 1, "Evento 1", "1" });
+                values: new object[] { 1, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4836), null, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(5190), null, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4469), 1, "Evento 1", "1" });
 
             migrationBuilder.InsertData(
                 table: "Evento",
                 columns: new[] { "Id", "Costo", "Descripcion", "FacultadId", "FechaAlta", "FechaBaja", "FechaEvento", "FechaModificacion", "HoraEvento", "LugarEventoId", "Nombre", "Sala" },
-                values: new object[] { 2, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1178), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1180), null, new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1173), 1, "Evento 2", "2" });
+                values: new object[] { 2, 10.4m, "evento de prueba", 1, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6205), null, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6207), null, new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6200), 1, "Evento 2", "2" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

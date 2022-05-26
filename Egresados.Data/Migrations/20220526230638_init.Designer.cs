@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Egresados.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220525104030_init")]
+    [Migration("20220526230638_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,7 +88,7 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "CRA",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(5048),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(9802),
                             Nombre = "Centro Regional de Azuero"
                         });
                 });
@@ -148,9 +148,9 @@ namespace Egresados.Data.Migrations
                             Costo = 10.4m,
                             Descripcion = "evento de prueba",
                             FacultadId = 1,
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9751),
-                            FechaEvento = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(120),
-                            HoraEvento = new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(9372),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4836),
+                            FechaEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(5190),
+                            HoraEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4469),
                             LugarEventoId = 1,
                             Nombre = "Evento 1",
                             Sala = "1"
@@ -161,9 +161,9 @@ namespace Egresados.Data.Migrations
                             Costo = 10.4m,
                             Descripcion = "evento de prueba",
                             FacultadId = 1,
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1178),
-                            FechaEvento = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1180),
-                            HoraEvento = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(1173),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6205),
+                            FechaEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6207),
+                            HoraEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6200),
                             LugarEventoId = 1,
                             Nombre = "Evento 2",
                             Sala = "2"
@@ -207,7 +207,7 @@ namespace Egresados.Data.Migrations
                             Id = 1,
                             CentroId = 1,
                             Codigo = "FISC",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(2723),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(7665),
                             Nombre = "Sistemas"
                         },
                         new
@@ -215,7 +215,7 @@ namespace Egresados.Data.Migrations
                             Id = 2,
                             CentroId = 1,
                             Codigo = "FIC",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 682, DateTimeKind.Local).AddTicks(3465),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(8366),
                             Nombre = "Civil"
                         });
                 });
@@ -248,14 +248,14 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "HTAzuero",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6450),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(1837),
                             Nombre = "Hotel Azuero"
                         },
                         new
                         {
                             Id = 2,
                             Codigo = "CRA",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 681, DateTimeKind.Local).AddTicks(6854),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(2245),
                             Nombre = "UTP Azuero"
                         });
                 });
@@ -288,14 +288,14 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "06",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 679, DateTimeKind.Local).AddTicks(4284),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 399, DateTimeKind.Local).AddTicks(1565),
                             Nombre = "Herrera"
                         },
                         new
                         {
                             Id = 2,
                             Codigo = "07",
-                            FechaAlta = new DateTime(2022, 5, 25, 5, 40, 29, 680, DateTimeKind.Local).AddTicks(4607),
+                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 400, DateTimeKind.Local).AddTicks(1157),
                             Nombre = "Los Santos"
                         });
                 });

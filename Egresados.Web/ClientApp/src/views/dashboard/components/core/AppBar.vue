@@ -7,9 +7,9 @@
     height="75"
   >
     <v-toolbar-title class="hidden-sm-and-down font-weight-bold white--text">
-     <span class="logo-icon">
-          <img src="../../../../assets/images/logos/logo-light-icon.png" />
-        </span>
+      <span class="logo-icon">
+        <img src="../../../../assets/images/logos/logo-light-icon.png">
+      </span>
       <span class="logo-text ml-2">
         <img
           src="../../../../assets/images/logos/logo-light-text.png"
@@ -17,7 +17,7 @@
         >
       </span>
     </v-toolbar-title>
-     <v-spacer />
+    <v-spacer />
     <v-toolbar-title
       class="hidden-sm-and-down font-weight-bold white--text"
       v-text="$route.name"
