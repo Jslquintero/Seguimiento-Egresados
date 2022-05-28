@@ -240,9 +240,9 @@
               this.form = data
               this.getOneFacultad(this.form.facultadId)
               this.getOneProvincia(this.form.provinciaId)
-
               if (data === '') {
-                this.showError('No se encontró el usuario')
+                this.loading()
+                this.crearPerfil()
               }
             })
             .catch((error) => {
@@ -280,6 +280,61 @@
       },
       editar () {
         this.$router.push({ name: 'EditarPerfil', params: { id: this.userId } })
+      },
+
+      crearPerfil () {
+        var form = {
+          fechaAlta: '',
+          fechaModificacion: '',
+          id: '',
+          usuarioId: this.userId,
+          facultad: '',
+          facultadId: '',
+          provincia: '',
+          provoinciaId: '',
+          genero: '',
+          direccion: '',
+          telefono: '',
+          biografia: '',
+          fechaNacimiento: '',
+          empresa: '',
+          linkedin: '',
+          instagram: '',
+        }
+
+        this.perfilServices
+          .save(form)
+          .then((data) => {
+            if (data === '') {
+              this.loadingPerfil()
+              this.$router.push({ name: 'EditarPerfil', params: { id: this.userId } })
+            }
+          })
+          .catch((error) => {
+            this.showError(error.response.data.title)
+          })
+      },
+
+      loading () {
+        this.$swal({
+          title: 'Cargando...',
+          text: 'Espere un momento por favor',
+          showConfirmButton: false,
+          onBeforeOpen: () => {
+            this.$swal.showLoading()
+          },
+        })
+      },
+      loadingPerfil () {
+        this.$swal({
+          title: 'Generando perfil...',
+          text: 'Espere un momento por favor',
+          timer: 2000,
+          showConfirmButton: false,
+          onBeforeOpen: () => {
+            this.$swal.showLoading()
+          },
+        })
       },
     },
   }
