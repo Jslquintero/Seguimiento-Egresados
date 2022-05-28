@@ -16,12 +16,6 @@
             md="5"
           >
             <v-text-field
-              v-model="form.nombre"
-              label="Nombre"
-              :rules="[(v) => !!v || 'Este campo es requiredo']"
-              required
-            />
-            <v-text-field
               v-model="form.telefono"
               label="Teléfono"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
@@ -34,42 +28,38 @@
               required
             />
             <v-text-field
-              v-model="form.biografia"
-              label="Biografía"
+              v-model="form.direccion"
+              label="Dirección de la empresa o institución"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
             <v-text-field
               v-model="form.fechaNacimiento"
-              label="Fecha del evento"
+              label="Fecha de nacimiento"
               type="date"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
             <v-text-field
               v-model="form.linkedin"
-              label="Linkedin"
-              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              label="Linkedin (Introducir solamente el Id de tu perfil: https://www.linkedin.com/in/IdPerfil/)"
             />
             <v-text-field
               v-model="form.instagram"
-              label="Instagram"
-              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              label="Instagram (Introducir nombre de usuario)"
             />
-            <v-col />
-            <v-col />
-            <v-col />
-            <v-col />
+            <v-label>Género</v-label>
             <v-select
               v-model="form.genero"
               label="Género"
               :items="generos"
-              item-text="nombre"
-              item-value="id"
+              item-text="text"
+              item-value="value"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               persistent-hint
               single-line
             />
+            <v-label>Provincia</v-label>
             <v-select
               v-model="form.provinciaId"
               label="Provincia"
@@ -80,8 +70,7 @@
               persistent-hint
               single-line
             />
-            <v-col />
-            <v-col />
+            <v-label>Facultad</v-label>
             <v-select
               v-model="form.facultadId"
               label="Facultad"
@@ -90,6 +79,14 @@
               item-value="id"
               persistent-hint
               single-line
+            />
+            <v-textarea
+              v-model="form.biografia"
+              outlined
+              counter
+              label="Biografía"
+              :rules="[(v) => !!v || 'Este campo es requiredo']"
+              required
             />
             <v-col />
           </v-col>
@@ -144,7 +141,7 @@
           provincia: '',
           provoinciaId: '',
           genero: '',
-          nombre: '',
+          direccion: '',
           telefono: '',
           biografia: '',
           fechaNacimiento: '',
@@ -166,9 +163,11 @@
       this.facultadServices = new FacultadServices()
       this.provinciaServices = new ProvinciaServices()
       this.perfilServices = new PerfilServices()
+      this.form.usuarioId = this.$route.params.id
+      this.getOneUsuario(this.$route.params.id)
     },
     mounted () {
-      this.getOnePerfil(this.$route.params.id)
+      // this.getOnePerfil(this.$route.params.id)
       this.selectListProvincia()
       this.selectListFacultad()
       this.form.fechaNacimiento = moment().format('YYYY-MM-DD')
@@ -216,18 +215,34 @@
           })
       },
 
-      getUserStorage () {
-        this.usuario = JSON.parse(localStorage.getItem('access_user'))
-      },
+      // getUserStorage () {
+      //   this.usuario = JSON.parse(localStorage.getItem('access_user'))
+      // },
 
-      getOnePerfil (id) {
+      // getOnePerfil (id) {
+      //   if (id !== '') {
+      //     this.perfilServices
+      //       .getOne(id)
+      //       .then((data) => {
+      //         console.log(data)
+      //         this.form = data
+      //         this.form.fechaNacimiento = moment(this.form.fechaEvento).format('YYYY-MM-DD')
+      //         this.form.usuarioId = this.usuario.id
+      //       })
+      //       .catch((error) => {
+      //         this.showError(error.response.data.title)
+      //         console.log(error.response.status)
+      //       })
+      //   }
+      // },
+
+      getOneUsuario (id) {
         if (id !== '') {
           this.perfilServices
-            .getOne(id)
+            .getOneUsuario(id)
             .then((data) => {
               this.form = data
-              this.form.fechaNacimiento = moment(this.form.fechaEvento).format('YYYY-MM-DD')
-              this.form.usuarioId = this.usuario.id
+              this.form.fechaNacimiento = moment(this.form.fechaNacimiento).format('YYYY-MM-DD')
             })
             .catch((error) => {
               this.showError(error.response.data.title)
@@ -242,6 +257,7 @@
           this.perfilServices
             .save(this.form)
             .then((data) => {
+              console.log(data)
               if (data === '') {
                 this.showSuccess('El perfil ha actualizado')
                 this.$router.push({

@@ -14,9 +14,9 @@
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DATABASE_NAME": "EgresadosNoSQL",
+        "DATABASE_NAME": "Egresado",
         "EGRESADOS_COLLECTION_NAME": "Egresados",
-        "CONNECTION_STRING": "mongodb+srv://root:<root>@cluster0.csoxi.mongodb.net/<EgresadosNoSQL>?retryWrites=true&w=majority"
+        "CONNECTION_STRING": "mongodb+srv://root:root@cluster0.csoxi.mongodb.net/Egresado?retryWrites=true&w=majority"
       }
     },
     "Egresados.Web": {
@@ -25,9 +25,9 @@
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DATABASE_NAME": "EgresadosNoSQL",
+        "DATABASE_NAME": "Egresado",
         "EGRESADOS_COLLECTION_NAME": "Egresados",
-        "CONNECTION_STRING": "mongodb+srv://root:<root>@cluster0.csoxi.mongodb.net/<EgresadosNoSQL>?retryWrites=true&w=majority"
+        "CONNECTION_STRING": "mongodb+srv://root:root@cluster0.csoxi.mongodb.net/Egresado?retryWrites=true&w=majority"
       },
       "applicationUrl": "http://localhost:5000"
     }

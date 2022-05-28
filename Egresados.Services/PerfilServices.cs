@@ -2,6 +2,7 @@
 using Egresados.Data.Repositorio;
 using Egresados.Model.Entities;
 using Egresados.Services.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace Egresados.Services
     public class PerfilServices : IPerfilServices
     {
         private readonly IMongoCollection<Perfil> _perfiles;
+        private readonly UserManager<Usuario> _userManager;
         public PerfilServices(IDbClient dbClient)
         {
             _perfiles = dbClient.GetPerfilCollection();
@@ -64,12 +66,9 @@ namespace Egresados.Services
                         //await ActualizarPedido(entidad);                      
                       
                         entidad.FechaModificacion = DateTime.Now;
-                        var list = await _perfiles.FindAsync(a => a.Id == entidad.Id);
+
+                       await _perfiles.ReplaceOneAsync(a => a.Id == entidad.Id, entidad);
                         
-                        foreach (var item in list.ToList())
-                        {
-                            await _perfiles.ReplaceOneAsync(a => a.Id == item.Id, entidad);
-                        }
                         
                     }
 
@@ -85,7 +84,15 @@ namespace Egresados.Services
 
         public async Task<Perfil> GetOne(string id)
         {
-            var list =  _perfiles.Find(a => a.Id == id).FirstOrDefault();
+            var list = await  _perfiles.Find(a => a.Id == id).ToListAsync();
+            var result = list.FirstOrDefault();
+            return result;
+        }
+
+        public async Task<Perfil> GetOneUsuario(string id)
+        {
+            //var user = await _userManager.FindByIdAsync(id);
+            var list = _perfiles.Find(a => a.UsuarioId == id).FirstOrDefault();
             var result = list;
             return result;
         }

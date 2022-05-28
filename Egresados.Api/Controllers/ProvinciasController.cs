@@ -27,12 +27,12 @@ namespace Egresados.Api.Controllers
         public ProvinciasController(ILogger<ProvinciasController> logger,
                                IMapper mapper,
                                UserManager<Usuario> userManager,
-                               IProvinciaServices _provinciaServices
+                               IProvinciaServices provinciaServices
                           )
         {
             _logger = logger;
             _mapper = mapper;
-            _provinciaServices = _provinciaServices;
+            _provinciaServices = provinciaServices;
         }
 
         /// <summary>
@@ -42,6 +42,17 @@ namespace Egresados.Api.Controllers
         public async Task<ActionResult<List<Provincia>>> SelectList()
         {
             var result = await _provinciaServices.GetListAsync();
+            return result;
+        }
+
+        /// <summary>
+        /// Obtiene la informacion del objeto.
+        /// </summary>
+        /// <param name="id"></param> 
+        [HttpGet("getOne/{id}")]
+        public async Task<ActionResult<Provincia>> GetOne(int? id)
+        {
+            var result = await _provinciaServices.GetOneAync(a => a.Id == id && a.FechaAlta.HasValue);
             return result;
         }
     }

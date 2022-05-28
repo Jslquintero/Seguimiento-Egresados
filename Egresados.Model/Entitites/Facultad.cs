@@ -33,6 +33,7 @@ namespace Egresados.Model.Entities
 
         #region Relaciones
         public  CentroEducativo CentroEducativo { get; set; }
+        public Perfil Perfil { get; set; }
         #endregion
     }
 }

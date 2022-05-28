@@ -149,7 +149,7 @@
               this.$router.push({ path: '/Dashboard' })
 
               localStorage.setItem('access_user', JSON.stringify(data))
-              // this.showSuccess('Entro al sistema correctamente.')
+              this.showSuccess('Entro al sistema correctamente.')
               // this.form = {};
             })
             .catch(error => {

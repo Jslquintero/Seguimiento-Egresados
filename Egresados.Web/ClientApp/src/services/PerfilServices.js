@@ -20,4 +20,8 @@ export default class PerfilServices {
     getOne (id) {
         return axios.get(process.env.VUE_APP_URL_API + 'perfiles/getOne/' + id).then(res => res.data)
     }
+
+    getOneUsuario (id) {
+        return axios.get(process.env.VUE_APP_URL_API + 'perfiles/getOneUsuario/' + id).then(res => res.data)
+    }
 }

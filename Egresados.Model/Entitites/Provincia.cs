@@ -34,7 +34,7 @@ namespace Egresados.Model.Entities
         #endregion
 
         #region Relaciones
-       
+        public Perfil Perfil { get; set; }
         #endregion
     }
 }

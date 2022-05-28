@@ -66,14 +66,6 @@ namespace Egresados.Api.Controllers
 
                 var token = GenerarTokenJwt(user);
 
-                //if (token.ProveedorId != null)
-                //{
-                //    var proveedor = await _proveedorServices.GetOneAync(a => a.Id == token.ProveedorId);
-                //    token.ProveedorNombre = proveedor.Nombre;
-                //}
-                //else {
-                //    token.ProveedorNombre = "Farmarcias San Nicolas";
-                //}
 
                 return token;
             }

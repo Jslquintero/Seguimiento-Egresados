@@ -15,22 +15,28 @@ namespace Egresados.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     //[Authorize]
-    public class PerfilesController : Controller
+    public class PerfilesController : ControllerBase
     {
         private readonly ILogger<PerfilesController> _logger;
         private readonly IMapper _mapper;
         private readonly UserManager<Usuario> _userManager;
         private readonly IPerfilServices _perfilServices;
+        private readonly IFacultadServices _facultadServices;
+        private readonly IProvinciaServices _provinciaServices;
 
         public PerfilesController(ILogger<PerfilesController> logger,
                                IMapper mapper,
                                UserManager<Usuario> userManager,
-                               IPerfilServices perfilServices
+                               IPerfilServices perfilServices,
+                               IFacultadServices facultadServices,
+                               IProvinciaServices provinciaServices
                           )
         {
             _logger = logger;
             _mapper = mapper;
             _perfilServices = perfilServices;
+            _facultadServices = facultadServices;
+            _provinciaServices = provinciaServices;
         }
 
         /// <summary>
@@ -60,6 +66,18 @@ namespace Egresados.Api.Controllers
             return result;
         }
 
+        /// <summary>
+        /// Obtiene la informacion del objeto.
+        /// </summary>
+        /// <param name="id"></param> 
+        [HttpGet("getOneUsuario/{id}")]
+        public async Task<ActionResult<Perfil>> GetOneUsuario(string id)
+        {
+            var result = await _perfilServices.GetOneUsuario(id);
+
+            return result;
+        }
+
         // <summary>
         /// Crea o Edita un nuevo Objeto.
         /// </summary>
@@ -68,7 +86,7 @@ namespace Egresados.Api.Controllers
         public async Task<ActionResult> Save(PerfilViewModel model)
         {
             try
-            {
+            {              
                 var entidad = _mapper.Map<PerfilViewModel, Perfil>(model);
                 var result = await _perfilServices.Save(entidad);
                 if (result.Id != null)

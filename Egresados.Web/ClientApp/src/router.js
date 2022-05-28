@@ -86,12 +86,12 @@ export default new Router({
           component: () => import('@/views/egresados/ListarEvento'),
         },
         {
-          name: 'perfil',
+          name: 'Perfil',
           path: 'Perfil',
           component: () => import('@/views/egresados/Perfil'),
         },
         {
-          name: 'Editar',
+          name: 'EditarPerfil',
           path: 'CrearEditar',
           component: () => import('@/views/egresados/CrearEditar'),
         },

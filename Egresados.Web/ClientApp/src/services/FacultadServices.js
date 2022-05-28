@@ -12,4 +12,8 @@ export default class FacultadServices {
     selectList () {
         return axios.get(process.env.VUE_APP_URL_API + 'facultades/selectList/').then(res => res.data)
     }
+
+    getOne (id) {
+        return axios.get(process.env.VUE_APP_URL_API + 'facultades/getOne/' + id).then(res => res.data)
+    }
 }

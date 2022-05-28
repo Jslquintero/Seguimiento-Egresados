@@ -86,7 +86,7 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "CRA",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(9802),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 606, DateTimeKind.Local).AddTicks(1406),
                             Nombre = "Centro Regional de Azuero"
                         });
                 });
@@ -146,9 +146,9 @@ namespace Egresados.Data.Migrations
                             Costo = 10.4m,
                             Descripcion = "evento de prueba",
                             FacultadId = 1,
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4836),
-                            FechaEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(5190),
-                            HoraEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(4469),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(5997),
+                            FechaEvento = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(6514),
+                            HoraEvento = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(5383),
                             LugarEventoId = 1,
                             Nombre = "Evento 1",
                             Sala = "1"
@@ -159,9 +159,9 @@ namespace Egresados.Data.Migrations
                             Costo = 10.4m,
                             Descripcion = "evento de prueba",
                             FacultadId = 1,
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6205),
-                            FechaEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6207),
-                            HoraEvento = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(6200),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(7655),
+                            FechaEvento = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(7656),
+                            HoraEvento = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(7648),
                             LugarEventoId = 1,
                             Nombre = "Evento 2",
                             Sala = "2"
@@ -193,9 +193,14 @@ namespace Egresados.Data.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<string>("PerfilId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CentroEducativoId");
+
+                    b.HasIndex("PerfilId");
 
                     b.ToTable("Facultad");
 
@@ -205,7 +210,7 @@ namespace Egresados.Data.Migrations
                             Id = 1,
                             CentroId = 1,
                             Codigo = "FISC",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(7665),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(9199),
                             Nombre = "Sistemas"
                         },
                         new
@@ -213,7 +218,7 @@ namespace Egresados.Data.Migrations
                             Id = 2,
                             CentroId = 1,
                             Codigo = "FIC",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(8366),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(9905),
                             Nombre = "Civil"
                         });
                 });
@@ -246,16 +251,65 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "HTAzuero",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(1837),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(2198),
                             Nombre = "Hotel Azuero"
                         },
                         new
                         {
                             Id = 2,
                             Codigo = "CRA",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 401, DateTimeKind.Local).AddTicks(2245),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 605, DateTimeKind.Local).AddTicks(2598),
                             Nombre = "UTP Azuero"
                         });
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Perfil", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Biografia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Empresa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FacultadId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaAlta")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaModificacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaNacimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Genero")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instagram")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Linkedin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProvinciaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UsuarioId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Perfil");
                 });
 
             modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
@@ -277,7 +331,12 @@ namespace Egresados.Data.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("PerfilId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("PerfilId");
 
                     b.ToTable("Provincia");
 
@@ -286,14 +345,14 @@ namespace Egresados.Data.Migrations
                         {
                             Id = 1,
                             Codigo = "06",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 399, DateTimeKind.Local).AddTicks(1565),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 602, DateTimeKind.Local).AddTicks(2907),
                             Nombre = "Herrera"
                         },
                         new
                         {
                             Id = 2,
                             Codigo = "07",
-                            FechaAlta = new DateTime(2022, 5, 26, 18, 6, 38, 400, DateTimeKind.Local).AddTicks(1157),
+                            FechaAlta = new DateTime(2022, 5, 26, 22, 16, 10, 604, DateTimeKind.Local).AddTicks(896),
                             Nombre = "Los Santos"
                         });
                 });
@@ -525,6 +584,11 @@ namespace Egresados.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PerfilId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasIndex("PerfilId");
+
                     b.ToTable("AspNetUsers");
 
                     b.HasDiscriminator().HasValue("Usuario");
@@ -551,7 +615,22 @@ namespace Egresados.Data.Migrations
                         .WithMany()
                         .HasForeignKey("CentroEducativoId");
 
+                    b.HasOne("Egresados.Model.Entities.Perfil", "Perfil")
+                        .WithMany("Facultad")
+                        .HasForeignKey("PerfilId");
+
                     b.Navigation("CentroEducativo");
+
+                    b.Navigation("Perfil");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Provincia", b =>
+                {
+                    b.HasOne("Egresados.Model.Entities.Perfil", "Perfil")
+                        .WithMany("Provincia")
+                        .HasForeignKey("PerfilId");
+
+                    b.Navigation("Perfil");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -603,6 +682,24 @@ namespace Egresados.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Usuario", b =>
+                {
+                    b.HasOne("Egresados.Model.Entities.Perfil", "Perfil")
+                        .WithMany("Usuario")
+                        .HasForeignKey("PerfilId");
+
+                    b.Navigation("Perfil");
+                });
+
+            modelBuilder.Entity("Egresados.Model.Entities.Perfil", b =>
+                {
+                    b.Navigation("Facultad");
+
+                    b.Navigation("Provincia");
+
+                    b.Navigation("Usuario");
                 });
 #pragma warning restore 612, 618
         }

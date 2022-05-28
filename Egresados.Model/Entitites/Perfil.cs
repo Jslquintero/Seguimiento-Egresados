@@ -29,8 +29,18 @@ namespace Egresados.Model.Entities
         #endregion
         public int? ProvinciaId { get; set; }
         public int? FacultadId { get; set; }
-        public int? UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         #region Calculados
+        
+        [NotMapped]
+
+        public string FechaString
+        {
+            get
+            {
+                return FechaNacimiento.HasValue ? FechaNacimiento.Value.ToString("dd/MM/yyyy") : "";
+            }
+        }
 
         #endregion
 

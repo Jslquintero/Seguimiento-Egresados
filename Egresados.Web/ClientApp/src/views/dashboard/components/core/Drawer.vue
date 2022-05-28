@@ -23,6 +23,27 @@
       two-line
       class="profile-bg"
     >
+      <v-list-item-content>
+        <a
+          href="javascript:void(0)"
+          style="text-decoration: none;"
+          @click="Home()"
+        >
+          <v-list-item-subtitle class="text-h3 font-weight-bold mb-3 light--text text-center">
+            <span class="logo-icon">
+              <img src="../../../../assets/images/logos/logo-light-icon.png">
+            </span>
+            Inicio
+          </v-list-item-subtitle>
+        </a>
+        <v-divider />
+      </v-list-item-content>
+      <!-- separacion -->
+    </v-list-item>
+    <v-list-item
+      two-line
+      class="profile-bg"
+    >
       <v-list-item-avatar>
         <img
           :src="`${usuario.url}`"
@@ -231,6 +252,9 @@
         })
 
         this.items = list
+      },
+      Home: function () {
+        this.$router.push({ path: '/Dashboard' })
       },
     },
   }

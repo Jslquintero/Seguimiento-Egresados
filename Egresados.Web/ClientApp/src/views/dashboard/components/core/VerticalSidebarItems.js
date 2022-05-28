@@ -70,7 +70,7 @@ export default [
         group: '/egresados',
         model: false,
         icon: 'mdi-account',
-        title: 'Bolsa de trabajos',
+        title: 'Actividades',
         class: 'two-column',
         to: '/egresados',
         autorizeRoles: 'Egresado',

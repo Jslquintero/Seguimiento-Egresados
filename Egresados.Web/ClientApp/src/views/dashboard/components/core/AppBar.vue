@@ -6,6 +6,29 @@
     flat
     height="75"
   >
+    <v-btn
+      id="btn-menu"
+      class="mr-3"
+      elevation="0"
+      small
+      @click="setDrawer(!drawer)"
+    >
+      <v-icon
+        v-if="value"
+        size="40"
+        color="white"
+      >
+        mdi-menu
+      </v-icon>
+
+      <v-icon
+        v-else
+        size="40"
+        color="white"
+      >
+        mdi-menu
+      </v-icon>
+    </v-btn>
     <v-toolbar-title class="hidden-sm-and-down font-weight-bold white--text">
       <span class="logo-icon">
         <img src="../../../../assets/images/logos/logo-light-icon.png">
@@ -310,5 +333,8 @@
 <style lang="scss">
 #app-bar {
   background: linear-gradient(90deg, #681d60 5%, #5c79c3 80%, #e7e7e7 100%);
+}
+#btn-menu{
+background: transparent;
 }
 </style>
