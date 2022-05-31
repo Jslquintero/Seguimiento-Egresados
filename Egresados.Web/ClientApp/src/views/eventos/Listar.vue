@@ -123,7 +123,6 @@
             console.log(error.response.status)
           })
       },
-
       addItem () {
         this.$router.push({ name: 'CrearEvento', params: { id: 0 } })
       },
