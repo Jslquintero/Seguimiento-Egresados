@@ -15,8 +15,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "Egresado",
-        "EGRESADOS_COLLECTION_NAME": "Egresados",
-        "CONNECTION_STRING": "mongodb+srv://root:root@cluster0.csoxi.mongodb.net/Egresado?retryWrites=true&w=majority"
+        "EGRESADOS_COLLECTION_NAME": "Egresados"
       }
     },
     "Egresados.Web": {
@@ -26,8 +25,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "Egresado",
-        "EGRESADOS_COLLECTION_NAME": "Egresados",
-        "CONNECTION_STRING": "mongodb+srv://root:root@cluster0.csoxi.mongodb.net/Egresado?retryWrites=true&w=majority"
+        "EGRESADOS_COLLECTION_NAME": "Egresados"
       },
       "applicationUrl": "http://localhost:5000"
     }
