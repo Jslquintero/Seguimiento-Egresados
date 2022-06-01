@@ -130,18 +130,29 @@
         this.$router.push({ name: 'CrearEvento', params: { id: item.id } })
       },
       deleteItem (item) {
-        this.eventoServices
-          .delete(item.id)
-          .then((data) => {
-            if (data === '') {
-              console.log(data)
-              this.showSuccess('Elemento eliminado correctamente.')
-            }
-          })
-          .catch((error) => {
-            this.showError(error.response.data.title)
-            console.log(error.response.status)
-          })
+        this.$swal({
+          title: '¿Estás seguro?',
+          text: '¿Estás seguro de eliminar el evento?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#691a5c',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Si, eliminar',
+          cancelButtonText: 'No, cancelar',
+        }).then((result) => {
+          if (result.value) {
+            this.eventoServices
+              .deleteItem(item.id)
+              .then((data) => {
+                this.showSuccess(data.title)
+                this.getList()
+              })
+              .catch((error) => {
+                this.showError(error.response.data.title)
+                console.log(error.response.status)
+              })
+          }
+        })
       },
     },
   }

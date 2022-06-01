@@ -58,7 +58,7 @@
 </template>
 
 <script>
-  import BolsaTrabajoServices from '../../services/BolsaTrabajos.js'
+  import BolsaTrabajoServices from '../../services/BolsaTrabajoServices.js'
 
   export default {
     name: 'Listar',
@@ -73,16 +73,17 @@
         { text: 'Telefono', value: 'telefono' },
         { text: 'Email', value: 'email' },
         { text: 'Observacion', value: 'observacion' },
+        { text: 'Acciones', value: 'actions' },
       ],
       snackbar: {
         active: false,
         text: '',
         color: '',
       },
-      bolsaTrabajosServices: null,
+      bolsaTrabajoServices: null,
     }),
     created () {
-      this.bolsaTrabajosServices = new BolsaTrabajoServices()
+      this.bolsaTrabajoServices = new BolsaTrabajoServices()
     },
     mounted () {
       this.getList()
@@ -128,18 +129,32 @@
         this.$router.push({ name: 'CrearTrabajo', params: { id: item.id } })
       },
       deleteItem (item) {
-        this.bolsaTrabajosServices
-          .delete(item.id)
-          .then((data) => {
-            if (data === '') {
-              console.log(data)
-              this.showSuccess('Elemento eliminado correctamente.')
-            }
-          })
-          .catch((error) => {
-            this.showError(error.response.data.title)
-            console.log(error.response.status)
-          })
+        this.$swal({
+          title: '¿Estás seguro?',
+          text: '¿Estás seguro de eliminar la bolsa de trabajo?',
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Si, eliminar!',
+          cancelButtonText: 'Cancelar',
+        }).then((result) => {
+          if (result.value) {
+            console.log(item.id)
+            this.bolsaTrabajoServices
+              .delete(item.id)
+              .then((data) => {
+                if (data === '') {
+                  this.showSuccess('La bolsa de trabajo ha sido eliminada')
+                  this.getList()
+                }
+              })
+              .catch((error) => {
+                this.showError(error.response.data.title)
+                console.log(error.response.status)
+              })
+          }
+        })
       },
     },
   }
