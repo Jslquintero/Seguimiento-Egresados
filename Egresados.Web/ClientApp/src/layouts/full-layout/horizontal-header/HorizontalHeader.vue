@@ -17,14 +17,14 @@
         :class="`${showLogo ? 'logo-width' : ''}`"
       >
         <span class="logo-icon">
-          <img src="../../../assets/images/logos/fasani.png">
+          <img src="../../../assets/images/logos/egresados.png">
         </span>
         <span
           class="logo-text ml-2"
           :class="`${showLogo ? '' : 'hidelogo'}`"
         >
           <img
-            src="../../../assets/images/logos/fasani.png"
+            src="../../../assets/images/logos/egresados.png"
             class="mt-2"
           >
         </span>
@@ -38,14 +38,14 @@
         :class="`${showLogo ? 'logo-width' : ''}`"
       >
         <span class="logo-icon">
-          <img src="../../../assets/images/logos/fasani.png">
+          <img src="../../../assets/images/logos/egresados.png">
         </span>
         <span
           class="logo-text ml-2"
           :class="`${showLogo ? '' : 'hidelogo'}`"
         >
           <img
-            src="../../../assets/images/logos/fasani.png"
+            src="../../../assets/images/logos/egresados.png"
             class="mt-2"
           >
         </span>

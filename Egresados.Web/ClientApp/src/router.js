@@ -81,9 +81,14 @@ export default new Router({
       component: () => import('@/views/dashboard/Index'),
       children: [
         {
-          name: 'Listar',
+          name: 'ListarEvento',
           path: 'ListarEvento',
           component: () => import('@/views/egresados/ListarEvento'),
+        },
+        {
+          name: 'ListarTrabajo',
+          path: 'ListarTrabajo',
+          component: () => import('@/views/egresados/ListarTrabajo'),
         },
         {
           name: 'Perfil',

@@ -144,8 +144,10 @@
             this.eventoServices
               .deleteItem(item.id)
               .then((data) => {
-                this.showSuccess(data.title)
-                this.getList()
+                if (data === '') {
+                  this.showSuccess('El evento ha sido eliminado')
+                  this.getList()
+                }
               })
               .catch((error) => {
                 this.showError(error.response.data.title)

@@ -59,7 +59,7 @@ export default [
             },
             {
                 icon: 'mdi-account-box-multiple',
-                title: 'Lista de Eventos',
+                title: 'Lista de Bolsas de Trabajo',
                 to: 'listar',
                 autorizeRoles: 'Empresa',
             },
@@ -79,6 +79,12 @@ export default [
                 icon: 'mdi-account-box-multiple',
                 title: 'Lista de Eventos',
                 to: 'listarEvento',
+                autorizeRoles: 'Egresado',
+            },
+            {
+                icon: 'mdi-account-box-multiple',
+                title: 'Lista de Trabajos',
+                to: 'listarTrabajo',
                 autorizeRoles: 'Egresado',
             },
         ],

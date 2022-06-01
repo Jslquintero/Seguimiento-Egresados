@@ -14,7 +14,7 @@
     >
       <span class="logo-icon">
         <img
-          src="../../../assets/images/logos/fasani.png"
+          src="../../../assets/images/logos/egresados.png"
           height="60"
           width="80"
           class="mt-2"
@@ -29,7 +29,7 @@
     >
       <span class="logo-icon">
         <img
-          src="../../../assets/images/logos/fasani.png"
+          src="../../../assets/images/logos/egresados.png"
           height="71"
           width="100"
           class="mt-2"

@@ -19,17 +19,6 @@
           md="9"
         />
       </v-row>
-      <v-col>
-        <v-btn
-          x-large
-          color="#691a5c"
-          rounded
-          dark
-          @click="addItem"
-        >
-          Crear nueva bolsa de trabajo
-        </v-btn>
-      </v-col>
       <v-col />
     </v-card-title>
 
@@ -40,17 +29,28 @@
     >
       <template v-slot:item.actions="{ item }">
         <v-icon
-          title="Editar"
+          color="yellow darken-2"
+          title="Aplicar"
           class="mr-2"
-          @click="editItem(item)"
+          @click="assitencia(item)"
         >
-          mdi-pencil
+          mdi-star
         </v-icon>
         <v-icon
-          small
-          @click="deleteItem(item)"
+          color="red darken-2"
+          title="Remover aplicación"
+          class="mr-2"
+          @click="assitencia(item)"
         >
-          mdi-delete
+          mdi-star-off
+        </v-icon>
+        <v-icon
+          color="blue darken-2"
+          title="Compartir"
+          class="mr-2"
+          @click="assitencia(item)"
+        >
+          mdi-share
         </v-icon>
       </template>
     </v-data-table>
@@ -121,40 +121,6 @@
             this.showError(error.response.data.title)
             console.log(error.response.status)
           })
-      },
-      addItem () {
-        this.$router.push({ name: 'CrearTrabajo', params: { id: 0 } })
-      },
-      editItem (item) {
-        this.$router.push({ name: 'CrearTrabajo', params: { id: item.id } })
-      },
-      deleteItem (item) {
-        this.$swal({
-          title: '¿Estás seguro?',
-          text: '¿Estás seguro de eliminar la bolsa de trabajo?',
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Si, eliminar!',
-          cancelButtonText: 'Cancelar',
-        }).then((result) => {
-          if (result.value) {
-            console.log(item.id)
-            this.bolsaTrabajoServices
-              .delete(item.id)
-              .then((data) => {
-                if (data === '') {
-                  this.showSuccess('La bolsa de trabajo ha sido eliminada')
-                  this.getList()
-                }
-              })
-              .catch((error) => {
-                this.showError(error.response.data.title)
-                console.log(error.response.status)
-              })
-          }
-        })
       },
     },
   }

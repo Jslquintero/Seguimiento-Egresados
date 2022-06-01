@@ -29,25 +29,29 @@
             />
             <v-text-field
               v-model="form.perfil"
-              label="Perfil"
+              label="Perfil a buscar"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
             <v-text-field
               v-model="form.telefono"
               label="Telefono"
+              type="phone"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
             <v-text-field
               v-model="form.email"
-              label="Emai"
+              type="email"
+              label="Email"
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
-            <v-text-field
+            <v-textarea
               v-model="form.observacion"
-              label="Observaciones"
+              label="Observaciones del cargo"
+              outlined
+              counter
               :rules="[(v) => !!v || 'Este campo es requiredo']"
               required
             />
@@ -88,7 +92,7 @@
 
 <script>
   import moment from 'moment'
-  import BolsaTrabajoServices from '../../services/BolsaTrabajos'
+  import BolsaTrabajoServices from '../../services/BolsaTrabajoServices.js'
 
   export default {
     name: 'CrearEditar',
@@ -108,7 +112,7 @@
       }
     },
     created () {
-      this.bolsaTrabajosServices = new BolsaTrabajoServices()
+      this.bolsaTrabajoServices = new BolsaTrabajoServices()
     },
     mounted () {
       this.getOneEvento(this.$route.params.id)
@@ -137,7 +141,7 @@
       save () {
         this.$refs.form.validate()
         if (this.$refs.form.validate(true)) {
-          this.bolsaTrabajosServices
+          this.bolsaTrabajoServices
             .save(this.form)
             .then((data) => {
               if (data === '') {

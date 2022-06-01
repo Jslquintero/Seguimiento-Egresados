@@ -146,8 +146,6 @@ namespace Egresados.Api
 
             app.UseOpenApi();
             app.UseSwaggerUi3();
-            //app.UseSwagger();
-            //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Fasani.Api v1"));
 
             app.UseHttpsRedirection();
 
